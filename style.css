@@ -95,8 +95,8 @@ body {
 /* Actual photo */
 
 .ayan-photo {
-    width: 240px;
-    height: 300px;
+    width: 960px;
+    height: 1200px;
 
     object-fit: cover;
     object-position: center;
