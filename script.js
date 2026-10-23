@@ -11,7 +11,7 @@
     the final Google Form.
 */
 
-const GOOGLE_FORM_URL = "";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog";
 
 
 
