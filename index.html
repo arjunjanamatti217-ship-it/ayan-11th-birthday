@@ -1,501 +1,1415 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =====================================================
+   RESET
+   ===================================================== */
 
-<head>
-    <meta charset="UTF-8">
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
 
-    <meta
-        name="description"
-        content="Ayan Janamatti's 11th Birthday Party Invitation"
-    >
+html {
+    scroll-behavior: smooth;
+}
 
-    <title>Ayan's 11th Birthday</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    min-height: 100vh;
 
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
-<body>
+    color: #282638;
 
-    <!-- ==========================================
-         HERO / FIRST SCREEN
-         ========================================== -->
+    line-height: 1.5;
 
-    <header class="hero">
+    background: #f7f4ff;
 
-        <!-- Background decorations -->
+    overflow-x: hidden;
+}
 
-        <span class="floating-icon icon-one">🎈</span>
-        <span class="floating-icon icon-two">⭐</span>
-        <span class="floating-icon icon-three">🎮</span>
-        <span class="floating-icon icon-four">🎉</span>
 
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
-        <div class="hero-container">
 
 
-            <!-- ==================================
-                 TOP NAVIGATION
-                 ================================== -->
+/* =====================================================
+   HERO
+   ===================================================== */
 
-            <nav class="top-navigation">
+.hero {
+    position: relative;
 
-                <div class="level-heading">
-                    🎮 LEVEL 11 UNLOCKED
-                </div>
+    min-height: 100vh;
 
+    padding: 20px;
 
-                <div class="navigation-date">
-                    🎂 28 OCTOBER 2026
-                </div>
+    background:
+        linear-gradient(
+            135deg,
+            #5448da 0%,
+            #784edc 48%,
+            #d63c8c 100%
+        );
 
+    overflow: hidden;
+}
 
-                <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="navigation-rsvp"
-                >
-                    RSVP NOW
-                </a>
 
-            </nav>
+.hero-container {
+    position: relative;
 
+    z-index: 2;
 
+    width: 100%;
 
-            <!-- ==================================
-                 MAIN HERO GRID
-                 ================================== -->
+    max-width: 1400px;
 
-            <div class="hero-grid">
+    margin: auto;
+}
 
 
-                <!-- ==============================
-                     LEFT: PHOTO AND TITLE
-                     ============================== -->
 
-                <section class="birthday-card">
+/* =====================================================
+   TOP NAVIGATION
+   ===================================================== */
 
-                    <div class="birthday-photo-wrapper">
+.top-navigation {
+    min-height: 58px;
 
-                        images/IMG_2448.jpeg
+    margin-bottom: 18px;
 
-                        <div class="age-badge">
-                            11
-                        </div>
+    padding: 8px 10px 8px 20px;
 
-                    </div>
+    display: flex;
 
+    align-items: center;
 
-                    <div class="birthday-introduction">
+    justify-content: space-between;
 
-                        <p class="eyebrow">
-                            YOU ARE INVITED TO
-                        </p>
+    gap: 16px;
 
-                        <h1>
-                            AYAN'S
-                            <span>BIRTHDAY</span>
-                        </h1>
+    color: #ffffff;
 
-                        <p class="hero-message">
-                            Join us for an epic birthday celebration
-                            filled with games, food, cake and fun!
-                        </p>
+    background:
+        rgba(31, 24, 91, 0.28);
 
-                    </div>
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
 
-                </section>
+    border-radius: 18px;
 
+    backdrop-filter: blur(12px);
 
+    box-shadow:
+        0 12px 30px rgba(30, 21, 86, 0.18);
+}
 
-                <!-- ==============================
-                     RIGHT: DETAILS AND RSVP
-                     ============================== -->
 
-                <section class="information-panel">
+.level-heading {
+    font-size: 0.9rem;
 
+    font-weight: 900;
 
-                    <!-- Name header -->
+    letter-spacing: 1.5px;
+}
 
-                    <div class="name-card">
 
-                        <div>
+.navigation-date {
+    font-size: 0.92rem;
 
-                            <p class="eyebrow dark-eyebrow">
-                                PLAYER ONE
-                            </p>
+    font-weight: 800;
+}
 
-                            <h2>
-                                AYAN JANAMATTI
-                            </h2>
 
-                            <p class="turning-text">
-                                is turning
-                                <strong>11!</strong>
-                            </p>
+.navigation-rsvp {
+    min-width: 130px;
 
-                        </div>
+    padding: 11px 18px;
 
+    color: #56317d;
 
-                        <div class="controller-icon">
-                            🕹️
-                        </div>
+    background: #ffd84b;
 
-                    </div>
+    border-radius: 12px;
 
+    text-align: center;
 
+    text-decoration: none;
 
-                    <!-- Details and RSVP row -->
+    font-size: 0.88rem;
 
-                    <div class="action-grid">
+    font-weight: 900;
 
+    box-shadow:
+        0 7px 16px rgba(24, 16, 63, 0.2);
 
-                        <!-- Party details -->
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
-                        <article class="info-card details-card">
 
-                            <div class="section-heading">
+.navigation-rsvp:hover {
+    transform: translateY(-2px);
 
-                                <div class="section-icon">
-                                    🎉
-                                </div>
+    box-shadow:
+        0 10px 20px rgba(24, 16, 63, 0.28);
+}
 
-                                <div>
 
-                                    <p class="mini-label">
-                                        SAVE THE DATE
-                                    </p>
 
-                                    <h2>
-                                        Party Details
-                                    </h2>
+/* =====================================================
+   HERO GRID
+   ===================================================== */
 
-                                </div>
+.hero-grid {
+    min-height:
+        calc(100vh - 116px);
 
-                            </div>
+    display: grid;
 
+    grid-template-columns:
+        minmax(350px, 0.9fr)
+        minmax(550px, 1.35fr);
 
-                            <div class="party-detail">
+    gap: 20px;
+}
 
-                                <div class="detail-emoji">
-                                    📅
-                                </div>
 
-                                <div>
 
-                                    <strong>
-                                        Date
-                                    </strong>
+/* =====================================================
+   BIRTHDAY PHOTO CARD
+   ===================================================== */
 
-                                    <p>
-                                        28 October 2026
-                                    </p>
+.birthday-card {
+    position: relative;
 
-                                </div>
+    min-width: 0;
 
-                            </div>
+    padding: 25px;
 
+    display: flex;
 
-                            <div class="party-detail">
+    flex-direction: column;
 
-                                <div class="detail-emoji">
-                                    ⏰
-                                </div>
+    justify-content: center;
 
-                                <div>
+    color: white;
 
-                                    <strong>
-                                        Time
-                                    </strong>
+    background:
+        linear-gradient(
+            155deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.07)
+        );
 
-                                    <p>
-                                        Coming soon!
-                                    </p>
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
 
-                                </div>
+    border-radius: 28px;
 
-                            </div>
+    text-align: center;
 
+    backdrop-filter: blur(10px);
 
-                            <div class="party-detail">
+    box-shadow:
+        0 20px 48px rgba(30, 21, 86, 0.22);
+}
 
-                                <div class="detail-emoji">
-                                    📍
-                                </div>
 
-                                <div>
+.birthday-photo-wrapper {
+    position: relative;
 
-                                    <strong>
-                                        Venue
-                                    </strong>
+    width:
+        min(100%, 370px);
 
-                                    <p>
-                                        Coming soon!
-                                    </p>
+    margin:
+        0 auto 20px;
+}
 
-                                </div>
 
-                            </div>
+.ayan-photo {
+    display: block;
 
-                        </article>
+    width: 100%;
 
+    max-height:
+        calc(100vh - 320px);
 
+    min-height: 280px;
 
-                        <!-- RSVP -->
+    object-fit: cover;
 
-                        <article class="info-card rsvp-card">
+    object-position: center;
 
-                            <div class="rsvp-emoji">
-                                🎈
-                            </div>
+    border:
+        6px solid white;
 
+    border-radius: 24px;
 
-                            <p class="mini-label">
-                                JOIN THE CELEBRATION
-                            </p>
+    box-shadow:
+        0 15px 35px rgba(24, 16, 63, 0.32);
+}
 
 
-                            <h2>
-                                Are You Coming?
-                            </h2>
+.age-badge {
+    position: absolute;
 
+    right: -13px;
 
-                            <p class="rsvp-description">
-                                We'd love to celebrate Ayan's
-                                special day with you!
-                            </p>
+    bottom: -13px;
 
+    width: 84px;
 
-                            <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="primary-button"
-                            >
-                                🎉 YES, I'M COMING!
-                            </a>
+    height: 84px;
 
+    display: flex;
 
-                            <p class="rsvp-help">
-                                Click to open the RSVP form
-                            </p>
+    align-items: center;
 
-                        </article>
+    justify-content: center;
 
-                    </div>
+    color: #57317d;
 
+    background: #ffd84b;
 
+    border:
+        5px solid white;
 
-                    <!-- Party highlights -->
+    border-radius: 50%;
 
-                    <div class="party-highlights">
+    font-size: 2.7rem;
 
-                        <div class="highlight-item">
-                            <span>🎮</span>
-                            <strong>Games</strong>
-                        </div>
+    font-weight: 900;
 
+    line-height: 1;
 
-                        <div class="highlight-item">
-                            <span>🍕</span>
-                            <strong>Food</strong>
-                        </div>
+    box-shadow:
+        0 10px 22px rgba(24, 16, 63, 0.24);
+}
 
 
-                        <div class="highlight-item">
-                            <span>🎂</span>
-                            <strong>Cake</strong>
-                        </div>
+.eyebrow {
+    margin-bottom: 4px;
 
+    font-size: 0.74rem;
 
-                        <div class="highlight-item">
-                            <span>🏆</span>
-                            <strong>Fun</strong>
-                        </div>
+    font-weight: 900;
 
-                    </div>
+    letter-spacing: 2px;
+}
 
 
-                </section>
+.birthday-introduction h1 {
+    font-size:
+        clamp(2.3rem, 4vw, 4rem);
 
-            </div>
+    line-height: 0.95;
 
-        </div>
+    letter-spacing: 1px;
+}
 
-    </header>
 
+.birthday-introduction h1 span {
+    display: block;
 
+    color: #ffd84b;
+}
 
-    <!-- ==========================================
-         ADDITIONAL CONTENT
-         ========================================== -->
 
-    <main class="main-content">
+.hero-message {
+    max-width: 420px;
 
+    margin:
+        12px auto 0;
 
-        <!-- ======================================
-             PARTY SQUAD
-             ====================================== -->
+    font-size: 0.94rem;
 
-        <section class="content-card">
+    line-height: 1.5;
 
-            <div class="content-heading">
+    opacity: 0.95;
+}
 
-                <div class="content-icon">
-                    👦
-                </div>
 
-                <div>
 
-                    <p class="mini-label">
-                        MEET THE PLAYERS
-                    </p>
+/* =====================================================
+   RIGHT INFORMATION PANEL
+   ===================================================== */
 
-                    <h2>
-                        The Party Squad
-                    </h2>
+.information-panel {
+    min-width: 0;
 
-                </div>
+    display: grid;
 
-            </div>
+    grid-template-rows:
+        auto 1fr auto;
 
+    gap: 14px;
+}
 
-            <p class="section-description">
-                Meet the friends joining Ayan's birthday celebration!
-            </p>
 
 
-            <div
-                id="guestList"
-                class="guest-list"
-            >
-            </div>
+/* =====================================================
+   NAME CARD
+   ===================================================== */
 
+.name-card {
+    min-height: 105px;
 
-            <p
-                id="guestCount"
-                class="guest-count"
-            >
-            </p>
+    padding:
+        18px 22px;
 
-        </section>
+    display: flex;
 
+    align-items: center;
 
+    justify-content: space-between;
 
-        <!-- ======================================
-             GAME ZONE
-             ====================================== -->
+    gap: 20px;
 
-        <section class="content-card">
+    background: white;
 
-            <div class="content-heading">
+    border-radius: 24px;
 
-                <div class="content-icon">
-                    🎮
-                </div>
+    box-shadow:
+        0 16px 38px rgba(30, 21, 86, 0.18);
+}
 
-                <div>
 
-                    <p class="mini-label">
-                        PREPARE TO PLAY
-                    </p>
+.dark-eyebrow {
+    color: #d83c8c;
+}
 
-                    <h2>
-                        Game Zone
-                    </h2>
 
-                </div>
+.name-card h2 {
+    color: #584bd0;
 
-            </div>
+    font-size:
+        clamp(1.7rem, 2.7vw, 2.7rem);
 
+    line-height: 1.05;
+}
 
-            <p class="section-description">
-                Get ready for some serious birthday fun!
-            </p>
 
+.turning-text {
+    color: #706a7b;
 
-            <div
-                id="gamesList"
-                class="games-grid"
-            >
-            </div>
+    font-size: 1rem;
+}
 
-        </section>
 
-    </main>
+.turning-text strong {
+    color: #dc3d8d;
 
+    font-size: 1.35rem;
+}
 
 
-    <!-- ==========================================
-         FINAL RSVP SECTION
-         ========================================== -->
+.controller-icon {
+    flex-shrink: 0;
 
-    <section class="final-rsvp-section">
+    width: 72px;
 
-        <div>
+    height: 72px;
 
-            <p class="final-label">
-                SAVE THE DATE
-            </p>
+    display: flex;
 
-            <h2>
-                Ready to Celebrate Ayan's Level 11?
-            </h2>
+    align-items: center;
 
-            <p>
-                28 October 2026
-            </p>
+    justify-content: center;
 
-        </div>
+    background: #f0edff;
 
+    border-radius: 21px;
 
-        <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="final-rsvp-button"
-        >
-            🎉 RSVP NOW
-        </a>
+    font-size: 40px;
+}
 
-    </section>
 
 
+/* =====================================================
+   DETAILS AND RSVP
+   ===================================================== */
 
-    <!-- ==========================================
-         FOOTER
-         ========================================== -->
+.action-grid {
+    min-height: 0;
 
-    <footer>
+    display: grid;
 
-        <div class="footer-emoji">
-            🎈 🎂 🎉 🎁 🎈
-        </div>
+    grid-template-columns:
+        1fr 0.92fr;
 
-        <h2>
-            Can't wait to celebrate with you!
-        </h2>
+    gap: 14px;
+}
 
-        <p>
-            Ayan's 11th Birthday • 28 October 2026
-        </p>
 
-    </footer>
+.info-card {
+    min-width: 0;
 
+    padding: 20px;
 
+    border-radius: 24px;
 
-    <!-- ==========================================
-         JAVASCRIPT
-         ========================================== -->
+    box-shadow:
+        0 16px 38px rgba(30, 21, 86, 0.16);
+}
 
-    <script src="script.js"></script>
 
-</body>
+.details-card {
+    background: white;
+}
 
-</html>
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 13px;
+}
+
+
+.section-icon,
+.content-icon {
+    flex-shrink: 0;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeeaff,
+            #fff0f6
+        );
+
+    border-radius: 16px;
+
+    font-size: 28px;
+}
+
+
+.mini-label {
+    color: #d83c8c;
+
+    font-size: 0.68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-heading h2,
+.rsvp-card h2 {
+    color: #584bd0;
+
+    font-size:
+        clamp(1.3rem, 1.8vw, 1.7rem);
+
+    line-height: 1.15;
+}
+
+
+
+/* =====================================================
+   PARTY DETAIL ITEMS
+   ===================================================== */
+
+.party-detail {
+    display: grid;
+
+    grid-template-columns:
+        46px 1fr;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 10px;
+
+    padding:
+        10px 12px;
+
+    background: #f8f6ff;
+
+    border:
+        1px solid #ece8ff;
+
+    border-radius: 14px;
+}
+
+
+.detail-emoji {
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 23px;
+}
+
+
+.party-detail strong {
+    display: block;
+
+    color: #594dca;
+
+    font-size: 0.85rem;
+}
+
+
+.party-detail p {
+    color: #555060;
+
+    font-size: 0.88rem;
+}
+
+
+
+/* =====================================================
+   RSVP CARD
+   ===================================================== */
+
+.rsvp-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff5c5,
+            #ffe3ef
+        );
+}
+
+
+.rsvp-emoji {
+    margin-bottom: 7px;
+
+    font-size: 40px;
+
+    line-height: 1;
+}
+
+
+.rsvp-card h2 {
+    margin:
+        4px 0 10px;
+}
+
+
+.rsvp-description {
+    max-width: 270px;
+
+    margin-bottom: 14px;
+
+    color: #625c6a;
+
+    font-size: 0.9rem;
+}
+
+
+.primary-button {
+    display: block;
+
+    width: 100%;
+
+    padding:
+        14px 16px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff655d,
+            #e53691
+        );
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 0.96rem;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 10px 22px rgba(229, 54, 145, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.primary-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 28px rgba(229, 54, 145, 0.4);
+}
+
+
+.rsvp-help {
+    margin-top: 9px;
+
+    color: #817985;
+
+    font-size: 0.74rem;
+}
+
+
+
+/* =====================================================
+   PARTY HIGHLIGHTS
+   ===================================================== */
+
+.party-highlights {
+    min-height: 76px;
+
+    padding:
+        9px 14px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+    color: white;
+
+    background:
+        rgba(31, 24, 91, 0.38);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.17);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.highlight-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    font-size: 0.84rem;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.22);
+}
+
+
+.highlight-item:last-child {
+    border-right: 0;
+}
+
+
+.highlight-item span {
+    font-size: 25px;
+}
+
+
+
+/* =====================================================
+   FLOATING BACKGROUND ICONS
+   ===================================================== */
+
+.floating-icon {
+    position: absolute;
+
+    z-index: 1;
+
+    font-size: 44px;
+
+    opacity: 0.18;
+
+    pointer-events: none;
+
+    animation:
+        floating 5s ease-in-out infinite;
+}
+
+
+.icon-one {
+    top: 95px;
+
+    left: 10px;
+}
+
+
+.icon-two {
+    top: 210px;
+
+    right: 12px;
+
+    animation-delay: 1s;
+}
+
+
+.icon-three {
+    bottom: 80px;
+
+    left: 12px;
+
+    animation-delay: 1.5s;
+}
+
+
+.icon-four {
+    bottom: 30px;
+
+    right: 12px;
+
+    animation-delay: 0.5s;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+    }
+
+}
+
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin:
+        26px auto;
+
+    padding:
+        0 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.content-card {
+    min-width: 0;
+
+    padding: 26px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 13px 34px rgba(64, 47, 132, 0.1);
+}
+
+
+.content-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 9px;
+}
+
+
+.content-heading h2 {
+    color: #584bd0;
+
+    font-size: 1.55rem;
+
+    line-height: 1.1;
+}
+
+
+.section-description {
+    margin-bottom: 18px;
+
+    color: #746e7d;
+
+    font-size: 0.9rem;
+}
+
+
+
+/* =====================================================
+   GUEST LIST
+   ===================================================== */
+
+.guest-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 14px;
+}
+
+
+.guest {
+    padding:
+        8px 14px;
+
+    color: #5546b7;
+
+    background: #eeeaff;
+
+    border-radius: 30px;
+
+    font-size: 0.84rem;
+
+    font-weight: 800;
+}
+
+
+.guest-count {
+    color: #dc398b;
+
+    font-size: 1rem;
+
+    font-weight: 900;
+}
+
+
+
+/* =====================================================
+   GAME GRID
+   ===================================================== */
+
+.games-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.game-card {
+    min-width: 0;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f1ff,
+            #fff0f6
+        );
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+
+.game-icon {
+    margin-bottom: 4px;
+
+    font-size: 29px;
+}
+
+
+.game-card h3 {
+    color: #594dca;
+
+    font-size: 0.92rem;
+}
+
+
+.game-card p {
+    color: #77717e;
+
+    font-size: 0.8rem;
+}
+
+
+
+/* =====================================================
+   FINAL RSVP
+   ===================================================== */
+
+.final-rsvp-section {
+    width:
+        calc(100% - 40px);
+
+    max-width: 1360px;
+
+    margin:
+        0 auto 26px;
+
+    padding:
+        23px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #584bdb,
+            #754bd8,
+            #d6398c
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 35px rgba(64, 47, 132, 0.18);
+}
+
+
+.final-label {
+    color: #ffd84b;
+
+    font-size: 0.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+}
+
+
+.final-rsvp-section h2 {
+    font-size:
+        clamp(1.3rem, 2.2vw, 2rem);
+
+    line-height: 1.2;
+}
+
+
+.final-rsvp-section p:last-child {
+    font-size: 0.9rem;
+
+    opacity: 0.9;
+}
+
+
+.final-rsvp-button {
+    flex-shrink: 0;
+
+    min-width: 180px;
+
+    padding:
+        14px 22px;
+
+    color: #56317d;
+
+    background: #ffd84b;
+
+    border-radius: 50px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 18px rgba(24, 16, 63, 0.2);
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.final-rsvp-button:hover {
+    transform: translateY(-3px);
+}
+
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    padding:
+        38px 20px;
+
+    color: white;
+
+    background: #29254d;
+
+    text-align: center;
+}
+
+
+.footer-emoji {
+    margin-bottom: 8px;
+
+    font-size: 30px;
+}
+
+
+footer h2 {
+    margin-bottom: 4px;
+
+    font-size: 1.4rem;
+}
+
+
+footer p {
+    font-size: 0.88rem;
+
+    opacity: 0.8;
+}
+
+
+
+/* =====================================================
+   LAPTOP
+   ===================================================== */
+
+@media (max-width: 1150px) {
+
+    .hero-grid {
+        grid-template-columns:
+            minmax(310px, 0.82fr)
+            minmax(480px, 1.18fr);
+    }
+
+
+    .birthday-card {
+        padding: 20px;
+    }
+
+
+    .birthday-photo-wrapper {
+        width:
+            min(100%, 320px);
+    }
+
+
+    .info-card {
+        padding: 17px;
+    }
+
+}
+
+
+
+/* =====================================================
+   SMALL LAPTOP / TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    .hero-grid {
+        min-height: auto;
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .birthday-card {
+        display: grid;
+
+        grid-template-columns:
+            minmax(260px, 0.85fr)
+            minmax(320px, 1.15fr);
+
+        align-items: center;
+
+        gap: 28px;
+    }
+
+
+    .birthday-photo-wrapper {
+        margin: 0;
+
+        width: 100%;
+    }
+
+
+    .ayan-photo {
+        max-height: 450px;
+
+        min-height: 0;
+    }
+
+
+    .action-grid {
+        min-height: 330px;
+    }
+
+
+    .main-content {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        padding:
+            12px;
+    }
+
+
+    .top-navigation {
+        padding:
+            10px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .level-heading {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .navigation-date,
+    .navigation-rsvp {
+        flex: 1;
+
+        text-align: center;
+    }
+
+
+    .birthday-card {
+        display: flex;
+
+        flex-direction: column;
+
+        padding:
+            20px 16px;
+    }
+
+
+    .birthday-photo-wrapper {
+        width:
+            min(100%, 310px);
+
+        margin:
+            0 auto 17px;
+    }
+
+
+    .ayan-photo {
+        max-height: none;
+    }
+
+
+    .birthday-introduction h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .name-card {
+        min-height: 95px;
+
+        padding: 16px;
+    }
+
+
+    .name-card h2 {
+        font-size: 1.45rem;
+    }
+
+
+    .controller-icon {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 32px;
+    }
+
+
+    .action-grid {
+        min-height: 0;
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .party-highlights {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .highlight-item:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .main-content {
+        margin:
+            18px auto;
+
+        padding:
+            0 12px;
+    }
+
+
+    .content-card {
+        padding: 20px;
+    }
+
+
+    .games-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .final-rsvp-section {
+        width:
+            calc(100% - 24px);
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .final-rsvp-button {
+        width: 100%;
+    }
+
+
+    .floating-icon {
+        display: none;
+    }
+
+}
+
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .navigation-date,
+    .navigation-rsvp {
+        width: 100%;
+
+        flex: auto;
+    }
+
+
+    .birthday-introduction h1 {
+        font-size: 2.1rem;
+    }
+
+
+    .age-badge {
+        width: 66px;
+
+        height: 66px;
+
+        font-size: 2rem;
+    }
+
+
+    .controller-icon {
+        display: none;
+    }
+
+
+    .party-highlights {
+        gap: 4px;
+    }
+
+
+    .highlight-item {
+        font-size: 0.76rem;
+    }
+
+}
