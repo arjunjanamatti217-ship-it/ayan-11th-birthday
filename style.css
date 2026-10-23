@@ -1,5 +1,5 @@
 /* =====================================================
-   RESET AND GLOBAL SETTINGS
+   RESET
    ===================================================== */
 
 * {
@@ -15,22 +15,18 @@ html {
 
 
 body {
+    min-height: 100vh;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    color: #25233a;
+    color: #282638;
 
     line-height: 1.5;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f5f2ff 0%,
-            #fff2f7 45%,
-            #fff8e6 100%
-        );
+    background: #f7f4ff;
 
     overflow-x: hidden;
 }
@@ -43,114 +39,52 @@ a {
 
 
 /* =====================================================
-   MAIN INVITATION PAGE
+   HERO
    ===================================================== */
 
-.invitation-page {
+.hero {
     position: relative;
-
-    width: 100%;
 
     min-height: 100vh;
 
-    padding:
-        20px 28px 55px;
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5448da 0%,
+            #784edc 48%,
+            #d63c8c 100%
+        );
 
     overflow: hidden;
 }
 
 
-
-/* =====================================================
-   DECORATIVE BACKGROUND EMOJIS
-   ===================================================== */
-
-.decoration {
-    position: absolute;
-
-    z-index: 0;
-
-    font-size: 44px;
-
-    pointer-events: none;
-
-    opacity: 0.2;
-
-    animation:
-        float-decoration 5s ease-in-out infinite;
-}
-
-
-.decoration-1 {
-    top: 95px;
-    left: 15px;
-}
-
-
-.decoration-2 {
-    top: 240px;
-    right: 15px;
-
-    animation-delay: 1s;
-}
-
-
-.decoration-3 {
-    bottom: 250px;
-    left: 18px;
-
-    animation-delay: 1.5s;
-}
-
-
-.decoration-4 {
-    bottom: 90px;
-    right: 15px;
-
-    animation-delay: 0.5s;
-}
-
-
-@keyframes float-decoration {
-
-    0%,
-    100% {
-        transform:
-            translateY(0)
-            rotate(0);
-    }
-
-
-    50% {
-        transform:
-            translateY(-14px)
-            rotate(4deg);
-    }
-
-}
-
-
-
-/* =====================================================
-   TOP BAR
-   ===================================================== */
-
-.top-bar {
+.hero-container {
     position: relative;
 
-    z-index: 10;
+    z-index: 2;
 
     width: 100%;
 
-    max-width: 1450px;
+    max-width: 1400px;
 
+    margin: auto;
+}
+
+
+
+/* =====================================================
+   TOP NAVIGATION
+   ===================================================== */
+
+.top-navigation {
     min-height: 58px;
 
-    margin:
-        0 auto 18px;
+    margin-bottom: 18px;
 
-    padding:
-        8px 10px 8px 20px;
+    padding: 8px 10px 8px 20px;
 
     display: flex;
 
@@ -158,69 +92,62 @@ a {
 
     justify-content: space-between;
 
-    gap: 15px;
+    gap: 16px;
 
-    color: white;
+    color: #ffffff;
 
     background:
-        linear-gradient(
-            135deg,
-            #5d50f2,
-            #7b4ee4,
-            #d7388d
-        );
+        rgba(31, 24, 91, 0.28);
 
-    border-radius: 20px;
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
 
     box-shadow:
-        0 12px 30px rgba(87, 66, 190, 0.2);
+        0 12px 30px rgba(30, 21, 86, 0.18);
 }
 
 
-.level-label {
+.level-heading {
     font-size: 0.9rem;
 
-    font-weight: 800;
+    font-weight: 900;
 
     letter-spacing: 1.5px;
 }
 
 
-.top-date {
-    font-size: 0.95rem;
+.navigation-date {
+    font-size: 0.92rem;
 
     font-weight: 800;
-
-    letter-spacing: 0.5px;
 }
 
 
-.top-rsvp-button {
-    display: inline-flex;
+.navigation-rsvp {
+    min-width: 130px;
 
-    align-items: center;
+    padding: 11px 18px;
 
-    justify-content: center;
+    color: #56317d;
 
-    min-width: 135px;
+    background: #ffd84b;
 
-    padding:
-        11px 20px;
+    border-radius: 12px;
 
-    color: #5c2c91;
-
-    background: #ffd84f;
-
-    border-radius: 14px;
+    text-align: center;
 
     text-decoration: none;
 
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 
     font-weight: 900;
 
     box-shadow:
-        0 5px 14px rgba(0, 0, 0, 0.15);
+        0 7px 16px rgba(24, 16, 63, 0.2);
 
     transition:
         transform 0.2s ease,
@@ -228,51 +155,44 @@ a {
 }
 
 
-.top-rsvp-button:hover {
-    transform:
-        translateY(-2px);
+.navigation-rsvp:hover {
+    transform: translateY(-2px);
 
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.2);
+        0 10px 20px rgba(24, 16, 63, 0.28);
 }
 
 
 
 /* =====================================================
-   FIRST-VIEW DASHBOARD
+   HERO GRID
    ===================================================== */
 
-.first-view {
-    position: relative;
-
-    z-index: 5;
-
-    width: 100%;
-
-    max-width: 1450px;
-
+.hero-grid {
     min-height:
         calc(100vh - 116px);
-
-    margin: auto;
 
     display: grid;
 
     grid-template-columns:
-        minmax(360px, 0.85fr)
-        minmax(560px, 1.45fr);
+        minmax(350px, 0.9fr)
+        minmax(550px, 1.35fr);
 
-    gap: 22px;
+    gap: 20px;
 }
 
 
 
 /* =====================================================
-   PHOTO SECTION
+   BIRTHDAY PHOTO CARD
    ===================================================== */
 
-.photo-section {
+.birthday-card {
     position: relative;
+
+    min-width: 0;
+
+    padding: 25px;
 
     display: flex;
 
@@ -280,77 +200,37 @@ a {
 
     justify-content: center;
 
-    min-width: 0;
-
-    padding:
-        22px 28px;
-
     color: white;
-
-    text-align: center;
 
     background:
         linear-gradient(
-            150deg,
-            #5c50f2 0%,
-            #7850df 42%,
-            #d43a90 100%
+            155deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.07)
         );
 
-    border-radius: 30px;
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
 
     box-shadow:
-        0 18px 48px rgba(80, 57, 177, 0.22);
-
-    overflow: hidden;
+        0 20px 48px rgba(30, 21, 86, 0.22);
 }
 
 
-.photo-section::before {
-    content: "";
-
-    position: absolute;
-
-    top: -100px;
-    left: -100px;
-
-    width: 250px;
-    height: 250px;
-
-    background:
-        rgba(255, 255, 255, 0.1);
-
-    border-radius: 50%;
-}
-
-
-.photo-section::after {
-    content: "";
-
-    position: absolute;
-
-    right: -70px;
-    bottom: -90px;
-
-    width: 220px;
-    height: 220px;
-
-    background:
-        rgba(255, 216, 79, 0.12);
-
-    border-radius: 50%;
-}
-
-
-.photo-frame {
+.birthday-photo-wrapper {
     position: relative;
 
-    z-index: 2;
-
-    width: min(100%, 360px);
+    width:
+        min(100%, 370px);
 
     margin:
-        0 auto 16px;
+        0 auto 20px;
 }
 
 
@@ -360,9 +240,9 @@ a {
     width: 100%;
 
     max-height:
-        calc(100vh - 345px);
+        calc(100vh - 320px);
 
-    min-height: 270px;
+    min-height: 280px;
 
     object-fit: cover;
 
@@ -374,28 +254,30 @@ a {
     border-radius: 24px;
 
     box-shadow:
-        0 15px 35px rgba(18, 13, 55, 0.32);
+        0 15px 35px rgba(24, 16, 63, 0.32);
 }
 
 
-.photo-badge {
+.age-badge {
     position: absolute;
 
     right: -13px;
+
     bottom: -13px;
 
-    width: 82px;
-    height: 82px;
+    width: 84px;
+
+    height: 84px;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    color: #573084;
+    justify-content: center;
 
-    background: #ffd84f;
+    color: #57317d;
+
+    background: #ffd84b;
 
     border:
         5px solid white;
@@ -409,57 +291,47 @@ a {
     line-height: 1;
 
     box-shadow:
-        0 9px 22px rgba(0, 0, 0, 0.22);
+        0 10px 22px rgba(24, 16, 63, 0.24);
 }
 
 
-.birthday-title {
-    position: relative;
+.eyebrow {
+    margin-bottom: 4px;
 
-    z-index: 2;
-}
+    font-size: 0.74rem;
 
-
-.small-title {
-    margin-bottom: 2px;
-
-    font-size: 0.78rem;
-
-    font-weight: 800;
+    font-weight: 900;
 
     letter-spacing: 2px;
-
-    opacity: 0.92;
 }
 
 
-.birthday-title h1 {
-    margin-bottom: 5px;
-
+.birthday-introduction h1 {
     font-size:
-        clamp(2.1rem, 3.4vw, 3.5rem);
+        clamp(2.3rem, 4vw, 4rem);
 
-    line-height: 1;
+    line-height: 0.95;
 
     letter-spacing: 1px;
 }
 
 
-.birthday-title h1 span {
+.birthday-introduction h1 span {
     display: block;
 
-    color: #ffd84f;
+    color: #ffd84b;
 }
 
 
-.birthday-subtitle {
+.hero-message {
     max-width: 420px;
 
-    margin: auto;
+    margin:
+        12px auto 0;
 
-    font-size: 0.92rem;
+    font-size: 0.94rem;
 
-    line-height: 1.4;
+    line-height: 1.5;
 
     opacity: 0.95;
 }
@@ -467,10 +339,10 @@ a {
 
 
 /* =====================================================
-   INFORMATION SECTION
+   RIGHT INFORMATION PANEL
    ===================================================== */
 
-.information-section {
+.information-panel {
     min-width: 0;
 
     display: grid;
@@ -478,20 +350,20 @@ a {
     grid-template-rows:
         auto 1fr auto;
 
-    gap: 16px;
+    gap: 14px;
 }
 
 
 
 /* =====================================================
-   WELCOME CARD
+   NAME CARD
    ===================================================== */
 
-.welcome-card {
-    min-height: 110px;
+.name-card {
+    min-height: 105px;
 
     padding:
-        19px 24px;
+        18px 22px;
 
     display: flex;
 
@@ -501,145 +373,123 @@ a {
 
     gap: 20px;
 
-    color: #322666;
+    background: white;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #faf8ff
-        );
-
-    border:
-        1px solid rgba(108, 99, 255, 0.12);
-
-    border-radius: 25px;
+    border-radius: 24px;
 
     box-shadow:
-        0 12px 32px rgba(74, 55, 147, 0.1);
+        0 16px 38px rgba(30, 21, 86, 0.18);
 }
 
 
-.welcome-label,
-.card-label,
-.content-label,
-.final-label {
-    color: #d93a8c;
-
-    font-size: 0.72rem;
-
-    font-weight: 900;
-
-    letter-spacing: 1.7px;
+.dark-eyebrow {
+    color: #d83c8c;
 }
 
 
-.welcome-card h2 {
-    margin:
-        2px 0 1px;
-
-    color: #5d50d8;
+.name-card h2 {
+    color: #584bd0;
 
     font-size:
-        clamp(1.6rem, 2.5vw, 2.45rem);
+        clamp(1.7rem, 2.7vw, 2.7rem);
 
     line-height: 1.05;
 }
 
 
-.turning-message {
-    color: #67627a;
+.turning-text {
+    color: #706a7b;
 
     font-size: 1rem;
 }
 
 
-.turning-message strong {
-    color: #ec3c8d;
+.turning-text strong {
+    color: #dc3d8d;
 
-    font-size: 1.3rem;
+    font-size: 1.35rem;
 }
 
 
-.welcome-icon {
+.controller-icon {
     flex-shrink: 0;
 
-    width: 74px;
-    height: 74px;
+    width: 72px;
+
+    height: 72px;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    background: #f0ecff;
+    justify-content: center;
 
-    border-radius: 22px;
+    background: #f0edff;
 
-    font-size: 42px;
+    border-radius: 21px;
+
+    font-size: 40px;
 }
 
 
 
 /* =====================================================
-   DETAILS AND RSVP GRID
+   DETAILS AND RSVP
    ===================================================== */
 
-.details-rsvp-grid {
+.action-grid {
     min-height: 0;
 
     display: grid;
 
     grid-template-columns:
-        1.05fr 0.95fr;
+        1fr 0.92fr;
 
-    gap: 16px;
+    gap: 14px;
 }
 
 
-.dashboard-card {
+.info-card {
     min-width: 0;
 
     padding: 20px;
 
-    border-radius: 25px;
+    border-radius: 24px;
 
     box-shadow:
-        0 12px 32px rgba(74, 55, 147, 0.1);
+        0 16px 38px rgba(30, 21, 86, 0.16);
 }
 
 
 .details-card {
     background: white;
-
-    border:
-        1px solid rgba(108, 99, 255, 0.12);
 }
 
 
-.card-heading {
+.section-heading {
     display: flex;
 
     align-items: center;
 
     gap: 12px;
 
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 }
 
 
-.card-heading-icon {
+.section-icon,
+.content-icon {
     flex-shrink: 0;
 
     width: 50px;
+
     height: 50px;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 
     background:
         linear-gradient(
@@ -654,27 +504,38 @@ a {
 }
 
 
-.card-heading h2,
+.mini-label {
+    color: #d83c8c;
+
+    font-size: 0.68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-heading h2,
 .rsvp-card h2 {
-    color: #574dcc;
+    color: #584bd0;
 
     font-size:
-        clamp(1.3rem, 1.7vw, 1.7rem);
+        clamp(1.3rem, 1.8vw, 1.7rem);
 
-    line-height: 1.1;
+    line-height: 1.15;
 }
 
 
 
 /* =====================================================
-   PARTY DETAILS
+   PARTY DETAIL ITEMS
    ===================================================== */
 
 .party-detail {
     display: grid;
 
     grid-template-columns:
-        47px 1fr;
+        46px 1fr;
 
     align-items: center;
 
@@ -688,41 +549,42 @@ a {
     background: #f8f6ff;
 
     border:
-        1px solid #eeeaff;
+        1px solid #ece8ff;
 
-    border-radius: 15px;
+    border-radius: 14px;
 }
 
 
-.detail-icon {
-    width: 43px;
-    height: 43px;
+.detail-emoji {
+    width: 42px;
+
+    height: 42px;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 
     background: white;
 
-    border-radius: 13px;
+    border-radius: 12px;
 
-    font-size: 24px;
+    font-size: 23px;
 }
 
 
 .party-detail strong {
     display: block;
 
-    color: #5b50cf;
+    color: #594dca;
 
-    font-size: 0.86rem;
+    font-size: 0.85rem;
 }
 
 
 .party-detail p {
-    color: #575367;
+    color: #555060;
 
     font-size: 0.88rem;
 }
@@ -738,6 +600,8 @@ a {
 
     flex-direction: column;
 
+    align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -745,37 +609,33 @@ a {
     background:
         linear-gradient(
             145deg,
-            #fff7ce,
-            #ffe6f1
+            #fff5c5,
+            #ffe3ef
         );
-
-    border:
-        1px solid rgba(236, 72, 153, 0.13);
 }
 
 
 .rsvp-emoji {
-    font-size: 42px;
+    margin-bottom: 7px;
+
+    font-size: 40px;
 
     line-height: 1;
-
-    margin-bottom: 7px;
 }
 
 
 .rsvp-card h2 {
     margin:
-        3px 0 9px;
+        4px 0 10px;
 }
 
 
 .rsvp-description {
-    max-width: 280px;
+    max-width: 270px;
 
-    margin:
-        0 auto 12px;
+    margin-bottom: 14px;
 
-    color: #5f596a;
+    color: #625c6a;
 
     font-size: 0.9rem;
 }
@@ -787,15 +647,15 @@ a {
     width: 100%;
 
     padding:
-        14px 17px;
+        14px 16px;
 
     color: white;
 
     background:
         linear-gradient(
             135deg,
-            #ff655e,
-            #e73594
+            #ff655d,
+            #e53691
         );
 
     border-radius: 50px;
@@ -807,7 +667,7 @@ a {
     font-weight: 900;
 
     box-shadow:
-        0 9px 22px rgba(231, 53, 148, 0.28);
+        0 10px 22px rgba(229, 54, 145, 0.3);
 
     transition:
         transform 0.2s ease,
@@ -816,179 +676,217 @@ a {
 
 
 .primary-button:hover {
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
-        0 13px 27px rgba(231, 53, 148, 0.38);
+        0 14px 28px rgba(229, 54, 145, 0.4);
 }
 
 
 .rsvp-help {
     margin-top: 9px;
 
-    color: #817889;
+    color: #817985;
 
-    font-size: 0.73rem;
+    font-size: 0.74rem;
 }
 
 
 
 /* =====================================================
-   FEATURE STRIP
+   PARTY HIGHLIGHTS
    ===================================================== */
 
-.feature-strip {
-    min-height: 80px;
+.party-highlights {
+    min-height: 76px;
 
     padding:
-        10px 18px;
+        9px 14px;
 
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 10px;
+    gap: 8px;
 
     color: white;
 
     background:
-        linear-gradient(
-            135deg,
-            #5d50f2,
-            #7c4edf
-        );
+        rgba(31, 24, 91, 0.38);
 
-    border-radius: 23px;
+    border:
+        1px solid rgba(255, 255, 255, 0.17);
 
-    box-shadow:
-        0 12px 32px rgba(76, 57, 166, 0.18);
+    border-radius: 22px;
+
+    backdrop-filter: blur(10px);
 }
 
 
-.feature-item {
+.highlight-item {
     display: flex;
-
-    justify-content: center;
 
     align-items: center;
 
-    gap: 8px;
+    justify-content: center;
 
-    padding:
-        7px 8px;
+    gap: 7px;
+
+    font-size: 0.84rem;
 
     border-right:
         1px solid rgba(255, 255, 255, 0.22);
-
-    font-size: 0.85rem;
 }
 
 
-.feature-item:last-child {
+.highlight-item:last-child {
     border-right: 0;
 }
 
 
-.feature-item span {
+.highlight-item span {
     font-size: 25px;
 }
 
 
 
 /* =====================================================
-   ADDITIONAL CONTENT
+   FLOATING BACKGROUND ICONS
    ===================================================== */
 
-.additional-content {
-    position: relative;
+.floating-icon {
+    position: absolute;
 
-    z-index: 5;
+    z-index: 1;
 
+    font-size: 44px;
+
+    opacity: 0.18;
+
+    pointer-events: none;
+
+    animation:
+        floating 5s ease-in-out infinite;
+}
+
+
+.icon-one {
+    top: 95px;
+
+    left: 10px;
+}
+
+
+.icon-two {
+    top: 210px;
+
+    right: 12px;
+
+    animation-delay: 1s;
+}
+
+
+.icon-three {
+    bottom: 80px;
+
+    left: 12px;
+
+    animation-delay: 1.5s;
+}
+
+
+.icon-four {
+    bottom: 30px;
+
+    right: 12px;
+
+    animation-delay: 0.5s;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+
+    50% {
+        transform:
+            translateY(-15px)
+            rotate(5deg);
+    }
+
+}
+
+
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+
+.main-content {
     width: 100%;
 
-    max-width: 1450px;
+    max-width: 1400px;
 
     margin:
-        24px auto 0;
+        26px auto;
+
+    padding:
+        0 20px;
 
     display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap: 22px;
+    gap: 20px;
 }
 
 
 .content-card {
     min-width: 0;
 
-    padding:
-        25px;
+    padding: 26px;
 
     background: white;
 
-    border:
-        1px solid rgba(108, 99, 255, 0.1);
-
-    border-radius: 25px;
+    border-radius: 24px;
 
     box-shadow:
-        0 12px 32px rgba(74, 55, 147, 0.09);
+        0 13px 34px rgba(64, 47, 132, 0.1);
 }
 
 
-.content-card-heading {
+.content-heading {
     display: flex;
 
     align-items: center;
 
-    gap: 14px;
+    gap: 13px;
 
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
 
-.content-heading-icon {
-    flex-shrink: 0;
+.content-heading h2 {
+    color: #584bd0;
 
-    width: 54px;
-    height: 54px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #eeeaff,
-            #fff0f6
-        );
-
-    border-radius: 17px;
-
-    font-size: 30px;
-}
-
-
-.content-card h2 {
-    color: #584dcd;
-
-    font-size: 1.5rem;
+    font-size: 1.55rem;
 
     line-height: 1.1;
 }
 
 
 .section-description {
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 
-    color: #777184;
+    color: #746e7d;
 
     font-size: 0.9rem;
 }
@@ -1014,20 +912,20 @@ a {
     padding:
         8px 14px;
 
-    color: #5545b8;
+    color: #5546b7;
 
     background: #eeeaff;
 
     border-radius: 30px;
 
-    font-size: 0.83rem;
+    font-size: 0.84rem;
 
     font-weight: 800;
 }
 
 
 .guest-count {
-    color: #dc388d;
+    color: #dc398b;
 
     font-size: 1rem;
 
@@ -1037,7 +935,7 @@ a {
 
 
 /* =====================================================
-   GAME CARDS
+   GAME GRID
    ===================================================== */
 
 .games-grid {
@@ -1053,14 +951,13 @@ a {
 .game-card {
     min-width: 0;
 
-    padding:
-        13px;
+    padding: 14px;
 
     background:
         linear-gradient(
             135deg,
-            #f5f2ff,
-            #fff1f6
+            #f4f1ff,
+            #fff0f6
         );
 
     border-radius: 15px;
@@ -1072,42 +969,46 @@ a {
 .game-icon {
     margin-bottom: 4px;
 
-    font-size: 28px;
+    font-size: 29px;
 }
 
 
 .game-card h3 {
-    color: #5c50cb;
+    color: #594dca;
 
-    font-size: 0.9rem;
+    font-size: 0.92rem;
+}
+
+
+.game-card p {
+    color: #77717e;
+
+    font-size: 0.8rem;
 }
 
 
 
 /* =====================================================
-   FINAL RSVP BANNER
+   FINAL RSVP
    ===================================================== */
 
-.final-banner {
-    position: relative;
+.final-rsvp-section {
+    width:
+        calc(100% - 40px);
 
-    z-index: 5;
-
-    width: 100%;
-
-    max-width: 1450px;
+    max-width: 1360px;
 
     margin:
-        22px auto 0;
+        0 auto 26px;
 
     padding:
-        22px 26px;
+        23px 28px;
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     gap: 20px;
 
@@ -1116,32 +1017,38 @@ a {
     background:
         linear-gradient(
             135deg,
-            #5d50ef,
-            #774ddd,
-            #d9378d
+            #584bdb,
+            #754bd8,
+            #d6398c
         );
 
-    border-radius: 25px;
+    border-radius: 24px;
 
     box-shadow:
-        0 14px 34px rgba(78, 56, 170, 0.2);
+        0 14px 35px rgba(64, 47, 132, 0.18);
 }
 
 
 .final-label {
-    color: #ffd84f;
+    color: #ffd84b;
+
+    font-size: 0.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
 }
 
 
-.final-banner h2 {
+.final-rsvp-section h2 {
     font-size:
-        clamp(1.3rem, 2vw, 2rem);
+        clamp(1.3rem, 2.2vw, 2rem);
 
     line-height: 1.2;
 }
 
 
-.final-banner p:last-child {
+.final-rsvp-section p:last-child {
     font-size: 0.9rem;
 
     opacity: 0.9;
@@ -1151,29 +1058,25 @@ a {
 .final-rsvp-button {
     flex-shrink: 0;
 
-    display: inline-flex;
-
-    justify-content: center;
-
-    align-items: center;
-
     min-width: 180px;
 
     padding:
-        14px 24px;
+        14px 22px;
 
-    color: #552c88;
+    color: #56317d;
 
-    background: #ffd84f;
+    background: #ffd84b;
 
     border-radius: 50px;
+
+    text-align: center;
 
     text-decoration: none;
 
     font-weight: 900;
 
     box-shadow:
-        0 7px 18px rgba(0, 0, 0, 0.18);
+        0 8px 18px rgba(24, 16, 63, 0.2);
 
     transition:
         transform 0.2s ease;
@@ -1181,8 +1084,7 @@ a {
 
 
 .final-rsvp-button:hover {
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 }
 
 
@@ -1193,7 +1095,7 @@ a {
 
 footer {
     padding:
-        40px 20px;
+        38px 20px;
 
     color: white;
 
@@ -1226,44 +1128,31 @@ footer p {
 
 
 /* =====================================================
-   NORMAL LAPTOP
+   LAPTOP
    ===================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
 
-    .first-view {
+    .hero-grid {
         grid-template-columns:
-            minmax(310px, 0.8fr)
-            minmax(500px, 1.4fr);
+            minmax(310px, 0.82fr)
+            minmax(480px, 1.18fr);
     }
 
 
-    .photo-section {
-        padding:
-            20px;
+    .birthday-card {
+        padding: 20px;
     }
 
 
-    .photo-frame {
+    .birthday-photo-wrapper {
         width:
             min(100%, 320px);
     }
 
 
-    .details-rsvp-grid {
-        gap: 12px;
-    }
-
-
-    .dashboard-card {
-        padding:
-            17px;
-    }
-
-
-    .welcome-card {
-        padding:
-            17px 20px;
+    .info-card {
+        padding: 17px;
     }
 
 }
@@ -1271,111 +1160,38 @@ footer p {
 
 
 /* =====================================================
-   SMALL LAPTOP AND TABLET
+   SMALL LAPTOP / TABLET
    ===================================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
-    .invitation-page {
-        padding:
-            15px 18px 45px;
+    .hero {
+        min-height: auto;
     }
 
 
-    .first-view {
+    .hero-grid {
         min-height: auto;
 
         grid-template-columns:
-            minmax(280px, 0.85fr)
-            minmax(400px, 1.15fr);
-    }
-
-
-    .details-rsvp-grid {
-        grid-template-columns:
             1fr;
-
-        gap: 12px;
     }
 
 
-    .ayan-photo {
-        max-height: none;
-
-        min-height: 0;
-    }
-
-
-    .feature-strip {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-
-    .feature-item:nth-child(2) {
-        border-right: 0;
-    }
-
-}
-
-
-
-/* =====================================================
-   TABLET PORTRAIT
-   ===================================================== */
-
-@media (max-width: 760px) {
-
-    .top-bar {
-        padding:
-            9px 10px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-
-    .level-label,
-    .top-date {
-        font-size: 0.76rem;
-    }
-
-
-    .top-rsvp-button {
-        min-width: 120px;
-
-        padding:
-            9px 15px;
-    }
-
-
-    .first-view {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 16px;
-    }
-
-
-    .photo-section {
+    .birthday-card {
         display: grid;
 
         grid-template-columns:
-            minmax(180px, 0.8fr)
-            minmax(210px, 1.2fr);
+            minmax(260px, 0.85fr)
+            minmax(320px, 1.15fr);
 
         align-items: center;
 
-        gap: 22px;
-
-        padding:
-            22px;
+        gap: 28px;
     }
 
 
-    .photo-frame {
+    .birthday-photo-wrapper {
         margin: 0;
 
         width: 100%;
@@ -1383,34 +1199,20 @@ footer p {
 
 
     .ayan-photo {
+        max-height: 450px;
+
         min-height: 0;
-
-        max-height: 380px;
     }
 
 
-    .photo-badge {
-        width: 68px;
-        height: 68px;
-
-        right: -9px;
-        bottom: -9px;
-
-        font-size: 2.1rem;
+    .action-grid {
+        min-height: 330px;
     }
 
 
-    .details-rsvp-grid {
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-
-    .additional-content {
+    .main-content {
         grid-template-columns:
             1fr;
-
-        gap: 16px;
     }
 
 }
@@ -1421,60 +1223,55 @@ footer p {
    MOBILE
    ===================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-    .invitation-page {
+    .hero {
         padding:
-            10px 12px 35px;
+            12px;
     }
 
 
-    .top-bar {
-        margin-bottom: 12px;
+    .top-navigation {
+        padding:
+            10px;
 
-        border-radius: 17px;
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
 
-    .level-label {
+    .level-heading {
         width: 100%;
 
         text-align: center;
     }
 
 
-    .top-date {
+    .navigation-date,
+    .navigation-rsvp {
         flex: 1;
 
         text-align: center;
     }
 
 
-    .top-rsvp-button {
-        flex: 1;
-
-        min-width: 130px;
-    }
-
-
-    .photo-section {
+    .birthday-card {
         display: flex;
 
         flex-direction: column;
 
         padding:
-            20px 18px;
-
-        border-radius: 24px;
+            20px 16px;
     }
 
 
-    .photo-frame {
+    .birthday-photo-wrapper {
         width:
-            min(100%, 300px);
+            min(100%, 310px);
 
         margin:
-            0 auto 14px;
+            0 auto 17px;
     }
 
 
@@ -1483,67 +1280,62 @@ footer p {
     }
 
 
-    .birthday-title h1 {
-        font-size: 2.4rem;
+    .birthday-introduction h1 {
+        font-size: 2.5rem;
     }
 
 
-    .information-section {
-        gap: 12px;
-    }
-
-
-    .welcome-card {
+    .name-card {
         min-height: 95px;
 
-        padding:
-            16px;
+        padding: 16px;
     }
 
 
-    .welcome-icon {
-        width: 60px;
-        height: 60px;
-
-        font-size: 34px;
+    .name-card h2 {
+        font-size: 1.45rem;
     }
 
 
-    .details-rsvp-grid {
+    .controller-icon {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 32px;
+    }
+
+
+    .action-grid {
+        min-height: 0;
+
         grid-template-columns:
             1fr;
-
-        gap: 12px;
     }
 
 
-    .dashboard-card {
+    .party-highlights {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .highlight-item:nth-child(2) {
+        border-right: 0;
+    }
+
+
+    .main-content {
+        margin:
+            18px auto;
+
         padding:
-            18px;
-    }
-
-
-    .feature-strip {
-        padding:
-            9px;
-
-        border-radius: 19px;
-    }
-
-
-    .feature-item {
-        font-size: 0.78rem;
-    }
-
-
-    .feature-item span {
-        font-size: 22px;
+            0 12px;
     }
 
 
     .content-card {
-        padding:
-            20px;
+        padding: 20px;
     }
 
 
@@ -1553,9 +1345,11 @@ footer p {
     }
 
 
-    .final-banner {
-        padding:
-            20px;
+    .final-rsvp-section {
+        width:
+            calc(100% - 24px);
+
+        padding: 20px;
 
         flex-direction: column;
 
@@ -1568,7 +1362,7 @@ footer p {
     }
 
 
-    .decoration {
+    .floating-icon {
         display: none;
     }
 
@@ -1582,44 +1376,40 @@ footer p {
 
 @media (max-width: 400px) {
 
-    .top-date {
+    .navigation-date,
+    .navigation-rsvp {
         width: 100%;
+
         flex: auto;
     }
 
 
-    .top-rsvp-button {
-        width: 100%;
-        flex: auto;
+    .birthday-introduction h1 {
+        font-size: 2.1rem;
     }
 
 
-    .birthday-title h1 {
+    .age-badge {
+        width: 66px;
+
+        height: 66px;
+
         font-size: 2rem;
     }
 
 
-    .photo-badge {
-        width: 62px;
-        height: 62px;
-
-        font-size: 1.9rem;
-    }
-
-
-    .welcome-card h2 {
-        font-size: 1.35rem;
-    }
-
-
-    .welcome-icon {
+    .controller-icon {
         display: none;
     }
 
 
-    .feature-strip {
-        grid-template-columns:
-            1fr 1fr;
+    .party-highlights {
+        gap: 4px;
+    }
+
+
+    .highlight-item {
+        font-size: 0.76rem;
     }
 
 }
