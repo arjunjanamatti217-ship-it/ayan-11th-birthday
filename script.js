@@ -237,46 +237,70 @@ function setupRSVPButton() {
         RSVP button click
     */
 
-    rsvpButton.addEventListener(
-        "click",
-        function () {
+//     rsvpButton.addEventListener(
+//         "click",
+//         function () {
 
-            /*
-                Google Form not configured yet
-            */
+//             /*
+//                 Google Form not configured yet
+//             */
 
-            if (GOOGLE_FORM_URL === "") {
+//             if (GOOGLE_FORM_URL === "") {
 
-                alert(
-                    "The RSVP form will be available soon! 🎉"
-                );
+//                 alert(
+//                     "The RSVP form will be available soon! 🎉"
+//                 );
 
-                return;
-            }
+//                 return;
+//             }
 
 
-            /*
-                Remember this browser
-            */
+//             /*
+//                 Remember this browser
+//             */
 
-            localStorage.setItem(
-                "ayanBirthdayRSVP",
-                "started"
+//             localStorage.setItem(
+//                 "ayanBirthdayRSVP",
+//                 "started"
+//             );
+
+
+//             /*
+//                 Open Google Form
+//             */
+
+//             window.location.href =
+//                 GOOGLE_FORM_URL;
+
+//         }
+//     );
+
+// }
+rsvpButton.addEventListener(
+    "click",
+    function () {
+
+        if (GOOGLE_FORM_URL === "") {
+
+            alert(
+                "The RSVP form will be available soon! 🎉"
             );
 
-
-            /*
-                Open Google Form
-            */
-
-            window.location.href =
-                GOOGLE_FORM_URL;
-
+            return;
         }
-    );
 
-}
+        localStorage.setItem(
+            "ayanBirthdayRSVP",
+            "started"
+        );
 
+        window.open(
+            GOOGLE_FORM_URL,
+            "_blank"
+        );
+
+    }
+);
 
 
 /* ==========================================
