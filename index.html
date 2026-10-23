@@ -1,448 +1,521 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ------------------------------
+   GLOBAL SETTINGS
+------------------------------ */
 
-<head>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    <meta charset="UTF-8">
+html {
+    scroll-behavior: smooth;
+}
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(
+            135deg,
+            #fff7e6,
+            #fff0f6
+        );
 
-    <meta
-        name="description"
-        content="Ayan Janamatti's 11th Birthday Party Invitation"
-    >
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    <title>Ayan's 11th Birthday 🎂</title>
 
-    <link rel="stylesheet" href="style.css">
+/* ------------------------------
+   HERO
+------------------------------ */
 
-</head>
+.hero {
+    min-height: 100vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-<body>
+    text-align: center;
 
+    padding: 50px 20px;
 
-    <!-- ==========================================
-         FLOATING DECORATIONS
-         ========================================== -->
+    background:
+        linear-gradient(
+            135deg,
+            #6c63ff,
+            #8b5cf6,
+            #ec4899
+        );
 
-    <div class="floating-decoration balloon balloon-1">
-        🎈
-    </div>
+    color: white;
 
-    <div class="floating-decoration balloon balloon-2">
-        🎈
-    </div>
+    position: relative;
+}
 
-    <div class="floating-decoration star star-1">
-        ⭐
-    </div>
+.hero-content {
+    width: 100%;
+    max-width: 1000px;
+}
+.small-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
 
-    <div class="floating-decoration star star-2">
-        ✨
-    </div>
 
+/* Temporary emoji photo */
 
+.temporary-avatar {
+    width: 150px;
+    height: 150px;
 
-<!-- ==========================================
-     HERO SECTION
-     ========================================== -->
+    margin: 0 auto 25px;
 
-<header class="hero">
+    border-radius: 50%;
 
-    <div class="hero-content">
+    background-color: white;
 
-        <p class="small-heading">
-            🎮 LEVEL 11 UNLOCKED 🎮
-        </p>
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    font-size: 80px;
 
-        <!-- AYAN'S PHOTO -->
+    border: 6px solid rgba(255,255,255,0.8);
 
-        <img
-            src="images/IMG_2448.jpeg"
-            alt="Ayan Janamatti"
-            class="ayan-photo"
-        >
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
+}
 
 
-        <h1>
-            AYAN JANAMATTI
-        </h1>
+/* Actual photo */
 
+.ayan-photo {
+    display: block;
+    width: 400px;
+    max-width: 80vw;
+    height: auto;
+    object-fit: contain;
+    border-radius: 24px;
+    border: 7px solid white;
+    margin: 25px auto 35px auto;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.30);
+}
 
-        <h2>
-            IS TURNING
-        </h2>
 
+.hero h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
 
-        <div class="age">
-            11
-        </div>
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
 
+.age {
+    font-size: 8rem;
+    line-height: 1;
+    font-weight: bold;
 
-        <p class="birthday-date">
-            🎂 28 OCTOBER 2026 🎂
-        </p>
+    color: #ffd700;
 
+    text-shadow:
+        4px 4px 0 #ff6b6b;
 
-        <p class="hero-message">
-            You're invited to an epic birthday celebration
-            filled with games, food, fun and surprises!
-        </p>
+    margin: 20px 0;
+}
 
-    </div>
+.birthday-date {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
-</header>
+.hero-message {
+    font-size: 1.15rem;
+    max-width: 550px;
+    margin: auto;
+}
 
-    <!-- ==========================================
-         MAIN CONTENT
-         ========================================== -->
 
-    <main>
+/* ------------------------------
+   MAIN CONTENT
+------------------------------ */
 
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
 
 
-        <!-- ======================================
-             PARTY DETAILS
-             ====================================== -->
+/* ------------------------------
+   CARDS
+------------------------------ */
 
-        <section class="card">
+.card {
+    background: white;
 
-            <h2>
-                🎉 Party Details
-            </h2>
+    margin-bottom: 30px;
 
+    padding: 40px;
 
-            <div class="details-grid">
+    border-radius: 25px;
 
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
 
-                <!-- DATE -->
+    text-align: center;
+}
 
-                <div class="detail-item">
+.card h2 {
+    color: #6c63ff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 
-                    <span class="detail-icon">
-                        📅
-                    </span>
+.section-description {
+    color: #666;
+    margin-bottom: 25px;
+}
 
-                    <div>
 
-                        <strong>
-                            Date
-                        </strong>
+/* ------------------------------
+   PARTY DETAILS
+------------------------------ */
 
-                        <p>
-                            28 October 2026
-                        </p>
+.details-grid {
+    display: grid;
 
-                    </div>
+    grid-template-columns:
+        repeat(3, 1fr);
 
-                </div>
+    gap: 20px;
+}
 
+.detail-item {
+    background: #f8f7ff;
 
+    padding: 25px 15px;
 
-                <!-- TIME -->
+    border-radius: 18px;
+}
 
-                <div class="detail-item">
+.detail-icon {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-                    <span class="detail-icon">
-                        ⏰
-                    </span>
+.detail-item strong {
+    display: block;
+    color: #6c63ff;
+    margin-bottom: 5px;
+}
 
-                    <div>
 
-                        <strong>
-                            Time
-                        </strong>
+/* ------------------------------
+   RSVP
+------------------------------ */
 
-                        <!--
-                            TODO:
-                            Replace this once party
-                            time is finalized.
-                        -->
+.rsvp-card {
+    background:
+        linear-gradient(
+            135deg,
+            #fff4cc,
+            #ffe8f1
+        );
+}
 
-                        <p>
-                            Party time coming soon!
-                        </p>
+.rsvp-icon {
+    font-size: 55px;
+}
 
-                    </div>
+.primary-button {
+    display: inline-block;
+    text-decoration: none;
+   
+    border: none;
 
-                </div>
+    background:
+        linear-gradient(
+            135deg,
+            #ff6b6b,
+            #ec4899
+        );
 
+    color: white;
 
+    font-size: 1.2rem;
+    font-weight: bold;
 
-                <!-- VENUE -->
+    padding: 16px 35px;
 
-                <div class="detail-item">
+    border-radius: 50px;
 
-                    <span class="detail-icon">
-                        📍
-                    </span>
+    margin-top: 20px;
 
-                    <div>
+    cursor: pointer;
 
-                        <strong>
-                            Venue
-                        </strong>
+    box-shadow:
+        0 8px 20px rgba(236,72,153,0.3);
 
-                        <!--
-                            TODO:
-                            Replace this once venue
-                            is finalized.
-                        -->
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
-                        <p>
-                            Venue details coming soon!
-                        </p>
+.primary-button:hover {
+    transform: translateY(-3px);
 
-                    </div>
+    box-shadow:
+        0 12px 25px rgba(236,72,153,0.4);
+}
 
-                </div>
+.rsvp-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #198754;
+}
 
 
-            </div>
+/* ------------------------------
+   GUEST LIST
+------------------------------ */
 
+.guest-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-        </section>
+    gap: 12px;
 
+    margin-bottom: 25px;
+}
 
+.guest {
+    padding: 10px 18px;
 
-        <!-- ======================================
-             RSVP
-             ====================================== -->
+    border-radius: 30px;
 
-        <section class="card rsvp-card">
+    background: #ede9fe;
 
+    color: #5b21b6;
 
-            <div class="rsvp-icon">
-                🎉
-            </div>
+    font-weight: bold;
+}
 
+.guest-count {
+    font-size: 1.3rem;
+    color: #ec4899;
+    font-weight: bold;
+}
 
-            <h2>
-                Are You Coming?
-            </h2>
 
+/* ------------------------------
+   GAMES
+------------------------------ */
 
-            <p>
-                We'd love to celebrate Ayan's
-                special day with you!
-            </p>
+.games-grid {
+    display: grid;
 
+    grid-template-columns:
+        repeat(2, 1fr);
 
-            <!--
-                IMPORTANT:
+    gap: 20px;
+}
 
-                This RSVP link goes DIRECTLY
-                to the Google Form.
+.game-card {
+    padding: 25px;
 
-                JavaScript is NOT required
-                for this button to work.
-            -->
+    border-radius: 20px;
 
-            <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="primary-button"
-            >
-                🎉 RSVP NOW
-            </a>
+    background:
+        linear-gradient(
+            135deg,
+            #f5f3ff,
+            #fff1f2
+        );
+}
 
+.game-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
 
-            <p class="rsvp-help">
-                Click above to let us know if you can join us.
-            </p>
+.game-card h3 {
+    color: #6c63ff;
+}
 
 
-        </section>
+/* ------------------------------
+   PARTY PROMISE
+------------------------------ */
 
+.party-promise {
+    background:
+        linear-gradient(
+            135deg,
+            #6c63ff,
+            #8b5cf6
+        );
 
+    color: white;
+}
 
-        <!-- ======================================
-             PARTY SQUAD
-             ====================================== -->
+.party-promise h2 {
+    color: white;
+}
 
-        <section class="card">
+.promise-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+    gap: 20px;
+}
 
-            <h2>
-                👦 The Party Squad
-            </h2>
+.promise-items div {
+    font-size: 40px;
+}
 
+.promise-items span {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-            <p class="section-description">
 
-                Meet the friends joining
-                Ayan's birthday celebration!
+/* ------------------------------
+   FOOTER
+------------------------------ */
 
-            </p>
+footer {
+    text-align: center;
 
+    padding: 60px 20px;
 
-            <!--
-                JavaScript populates
-                confirmed guest names here.
-            -->
+    background: #29254d;
 
-            <div
-                id="guestList"
-                class="guest-list"
-            >
-            </div>
+    color: white;
+}
 
+.footer-emoji {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
 
-            <!--
-                JavaScript populates
-                guest count here.
-            -->
+footer h2 {
+    margin-bottom: 10px;
+}
 
-            <p
-                id="guestCount"
-                class="guest-count"
-            >
-            </p>
 
+/* ------------------------------
+   FLOATING DECORATIONS
+------------------------------ */
 
-        </section>
+.floating-decoration {
+    position: absolute;
 
+    font-size: 45px;
 
+    animation:
+        float 4s ease-in-out infinite;
+}
 
-        <!-- ======================================
-             GAMES
-             ====================================== -->
+.balloon-1 {
+    top: 10%;
+    left: 7%;
+}
 
-        <section class="card games-section">
+.balloon-2 {
+    top: 20%;
+    right: 7%;
 
+    animation-delay: 1s;
+}
 
-            <h2>
-                🎮 Game Zone
-            </h2>
+.star-1 {
+    bottom: 15%;
+    left: 12%;
 
+    animation-delay: 0.5s;
+}
 
-            <p class="section-description">
+.star-2 {
+    bottom: 20%;
+    right: 12%;
 
-                Get ready for some serious
-                birthday fun!
+    animation-delay: 1.5s;
+}
 
-            </p>
+@keyframes float {
 
+    0%,
+    100% {
+        transform: translateY(0);
+    }
 
-            <!--
-                JavaScript populates
-                the games here.
-            -->
+    50% {
+        transform: translateY(-18px);
+    }
+}
 
-            <div
-                id="gamesList"
-                class="games-grid"
-            >
-            </div>
 
+/* ------------------------------
+   MOBILE RESPONSIVENESS
+------------------------------ */
 
-        </section>
+@media (max-width: 700px) {
 
+    .hero {
+        min-height: 90vh;
+    }
 
+    .hero h1 {
+        font-size: 2rem;
+    }
 
-        <!-- ======================================
-             PARTY FEATURES
-             ====================================== -->
+    .hero h2 {
+        font-size: 1.2rem;
+    }
 
-        <section class="card party-promise">
+    .age {
+        font-size: 6rem;
+    }
 
+    .birthday-date {
+        font-size: 1.15rem;
+    }
 
-            <h2>
-                🎂 Get Ready!
-            </h2>
+    main {
+        padding: 30px 15px;
+    }
 
+    .card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
 
-            <div class="promise-items">
+    .card h2 {
+        font-size: 1.6rem;
+    }
 
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
 
-                <div>
-                    🎮
-                    <span>
-                        Games
-                    </span>
-                </div>
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
 
-
-                <div>
-                    🍕
-                    <span>
-                        Food
-                    </span>
-                </div>
-
-
-                <div>
-                    🎂
-                    <span>
-                        Cake
-                    </span>
-                </div>
-
-
-                <div>
-                    🏆
-                    <span>
-                        Fun
-                    </span>
-                </div>
-
-
-            </div>
-
-
-        </section>
-
-
-
-    </main>
-
-
-
-    <!-- ==========================================
-         FOOTER
-         ========================================== -->
-
-    <footer>
-
-
-        <div class="footer-emoji">
-
-            🎈 🎂 🎉 🎁 🎈
-
-        </div>
-
-
-        <h2>
-
-            Can't wait to celebrate with you!
-
-        </h2>
-
-
-        <p>
-
-            Ayan's 11th Birthday • 28 October 2026
-
-        </p>
-
-
-    </footer>
-
-
-
-    <!-- ==========================================
-         JAVASCRIPT
-         ========================================== -->
-
-    <script src="script.js"></script>
-
-
-</body>
-
-</html>
+    .floating-decoration {
+        font-size: 30px;
+    }
+}
