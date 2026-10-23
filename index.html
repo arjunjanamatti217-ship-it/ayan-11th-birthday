@@ -3,11 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
@@ -19,34 +15,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-    <!-- Floating decorations -->
-    <span class="floating-icon balloon">🎈</span>
-    <span class="floating-icon star">⭐</span>
-    <span class="floating-icon game">🎮</span>
-    <span class="floating-icon party">🎉</span>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <header class="hero">
+
+        <!-- Decorative background icons -->
+        <span class="floating-icon icon-one">🎈</span>
+        <span class="floating-icon icon-two">⭐</span>
+        <span class="floating-icon icon-three">🎮</span>
+        <span class="floating-icon icon-four">🎉</span>
+
+        <div class="hero-container">
 
 
-    <!-- ==================================================
-         MAIN HERO
-         ================================================== -->
+            <!-- =================================================
+                 TOP NAVIGATION
+                 ================================================= -->
 
-    <main class="hero">
+            <nav class="top-navigation">
 
-        <div class="page-container">
-
-
-            <!-- TOP BAR -->
-
-            <nav class="top-bar">
-
-                <div class="level">
+                <div class="level-heading">
                     🎮 LEVEL 11 UNLOCKED
                 </div>
 
-                <div class="top-date">
+                <div class="navigation-date">
                     🎂 28 OCTOBER 2026
                 </div>
 
@@ -54,7 +50,7 @@
                     href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="top-rsvp"
+                    class="navigation-rsvp"
                 >
                     RSVP NOW
                 </a>
@@ -62,22 +58,24 @@
             </nav>
 
 
-            <!-- ==================================================
-                 MAIN INVITATION CARD
-                 ================================================== -->
+            <!-- =================================================
+                 MAIN HERO
+                 ================================================= -->
 
-            <section class="invitation-card">
+            <div class="hero-grid">
 
 
-                <!-- LEFT SIDE: PHOTO -->
+                <!-- =================================================
+                     LEFT SIDE
+                     ================================================= -->
 
-                <div class="photo-section">
+                <section class="birthday-card">
 
-                    <div class="photo-wrapper">
+                    <div class="birthday-photo-wrapper">
 
                         <img
                             src="images/IMG_2448.jpeg"
-                            alt="Ayan Janamatti"
+                            alt="Ayan's birthday photo"
                             class="ayan-photo"
                         >
 
@@ -88,9 +86,9 @@
                     </div>
 
 
-                    <div class="photo-text">
+                    <div class="birthday-introduction">
 
-                        <p class="small-heading">
+                        <p class="eyebrow">
                             YOU'RE INVITED TO
                         </p>
 
@@ -99,28 +97,30 @@
                             <span>BIRTHDAY!</span>
                         </h1>
 
-                        <p class="intro-text">
+                        <p class="hero-message">
                             Join us for an epic celebration filled with
                             games, food, cake and lots of fun!
                         </p>
 
                     </div>
 
-                </div>
+                </section>
 
 
-                <!-- RIGHT SIDE -->
+                <!-- =================================================
+                     RIGHT SIDE
+                     ================================================= -->
 
-                <div class="details-section">
+                <section class="information-panel">
 
 
                     <!-- NAME HEADER -->
 
-                    <section class="name-banner">
+                    <div class="name-card">
 
                         <div>
 
-                            <p class="pink-label">
+                            <p class="eyebrow dark-eyebrow">
                                 PLAYER ONE
                             </p>
 
@@ -128,37 +128,41 @@
                                 AYAN JANAMATTI
                             </h2>
 
-                            <p class="turning">
+                            <p class="turning-text">
                                 is turning <strong>11!</strong>
                             </p>
 
                         </div>
 
-                        <div class="controller">
+                        <div class="controller-icon">
                             🕹️
                         </div>
 
-                    </section>
+                    </div>
 
 
-                    <!-- PARTY DETAILS + RSVP -->
+                    <!-- =================================================
+                         TWO WHITE CARDS
+                         ================================================= -->
 
-                    <div class="details-grid">
+                    <div class="action-grid">
 
 
-                        <!-- PARTY DETAILS -->
+                        <!-- =========================
+                             PARTY DETAILS
+                             ========================= -->
 
-                        <section class="party-card">
+                        <article class="info-card details-card">
 
-                            <div class="card-heading">
+                            <div class="section-heading">
 
-                                <span class="heading-icon">
+                                <div class="section-icon">
                                     🎉
-                                </span>
+                                </div>
 
                                 <div>
 
-                                    <p class="pink-label">
+                                    <p class="mini-label">
                                         SAVE THE DATE
                                     </p>
 
@@ -171,54 +175,82 @@
                             </div>
 
 
-                            <div class="detail-row">
+                            <div class="party-detail">
 
-                                <span class="detail-icon">
+                                <div class="detail-emoji">
                                     📅
-                                </span>
+                                </div>
 
                                 <div>
-                                    <strong>Date</strong>
-                                    <p>28 October 2026</p>
+
+                                    <strong>
+                                        Date
+                                    </strong>
+
+                                    <p>
+                                        28 October 2026
+                                    </p>
+
                                 </div>
 
                             </div>
 
 
-                            <div class="detail-row">
+                            <div class="party-detail">
 
-                                <span class="detail-icon">
+                                <div class="detail-emoji">
                                     ⏰
-                                </span>
+                                </div>
 
                                 <div>
-                                    <strong>Time</strong>
-                                    <p>Coming soon!</p>
+
+                                    <strong>
+                                        Time
+                                    </strong>
+
+                                    <p>
+                                        Coming soon!
+                                    </p>
+
                                 </div>
 
                             </div>
 
 
-                            <div class="detail-row">
+                            <div class="party-detail">
 
-                                <span class="detail-icon">
+                                <div class="detail-emoji">
                                     📍
-                                </span>
+                                </div>
 
                                 <div>
-                                    <strong>Venue</strong>
-                                    <p>Coming soon!</p>
+
+                                    <strong>
+                                        Venue
+                                    </strong>
+
+                                    <p>
+                                        Coming soon!
+                                    </p>
+
                                 </div>
 
                             </div>
 
-                        </section>
+                        </article>
 
 
-                     🎈
+                        <!-- =========================
+                             RSVP - WHITE CARD
+                             ========================= -->
+
+                        <article class="info-card rsvp-card">
+
+                            <div class="rsvp-emoji">
+                                🎈
                             </div>
 
-                            <p class="pink-label">
+                            <p class="mini-label">
                                 JOIN THE CELEBRATION
                             </p>
 
@@ -226,7 +258,7 @@
                                 Are You Coming?
                             </h2>
 
-                            <p>
+                            <p class="rsvp-description">
                                 We'd love to celebrate Ayan's
                                 special day with you!
                             </p>
@@ -235,40 +267,40 @@
                                 href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="main-rsvp-button"
+                                class="primary-button"
                             >
                                 🎉 YES, I'M COMING!
                             </a>
 
-                            <small>
-                                Click above to open the RSVP form
-                            </small>
+                            <p class="rsvp-help">
+                                Click to open the RSVP form
+                            </p>
 
-                        </section>
+                        </article>
 
                     </div>
 
 
-                    <!-- FUN ROW -->
+                  ===== -->
 
-                    <div class="fun-row">
+                    <div class="party-highlights">
 
-                        <div>
+                        <div class="highlight-item">
                             <span>🎮</span>
                             <strong>Games</strong>
                         </div>
 
-                        <div>
+                        <div class="highlight-item">
                             <span>🍕</span>
                             <strong>Food</strong>
                         </div>
 
-                        <div>
+                        <div class="highlight-item">
                             <span>🎂</span>
                             <strong>Cake</strong>
                         </div>
 
-                        <div>
+                        <div class="highlight-item">
                             <span>🏆</span>
                             <strong>Fun</strong>
                         </div>
@@ -276,34 +308,35 @@
                     </div>
 
 
-                </div>
+                </section>
 
-            </section>
+            </div>
 
         </div>
 
-    </main>
+    </header>
 
 
-
-    <!-- ==================================================
+    <!-- =====================================================
          LOWER CONTENT
-         ================================================== -->
+         ===================================================== -->
 
-    <section class="lower-section">
+    <main class="main-content">
 
 
         <!-- PARTY SQUAD -->
 
-        <article class="lower-card">
+        <section class="content-card">
 
-            <div class="lower-heading">
+            <div class="content-heading">
 
-                <span>👦</span>
+                <div class="content-icon">
+                    👦
+                </div>
 
                 <div>
 
-                    <p class="pink-label">
+                    <p class="mini-label">
                         MEET THE PLAYERS
                     </p>
 
@@ -315,7 +348,7 @@
 
             </div>
 
-            <p class="description">
+            <p class="section-description">
                 Meet the friends joining Ayan's birthday celebration!
             </p>
 
@@ -329,20 +362,22 @@
                 class="guest-count"
             ></p>
 
-        </article>
+        </section>
 
 
         <!-- GAME ZONE -->
 
-        <article class="lower-card">
+        <section class="content-card">
 
-            <div class="lower-heading">
+            <div class="content-heading">
 
-                <span>🎮</span>
+                <div class="content-icon">
+                    🎮
+                </div>
 
                 <div>
 
-                    <p class="pink-label">
+                    <p class="mini-label">
                         PREPARE TO PLAY
                     </p>
 
@@ -354,7 +389,7 @@
 
             </div>
 
-            <p class="description">
+            <p class="section-description">
                 Get ready for some serious birthday fun!
             </p>
 
@@ -363,21 +398,20 @@
                 class="games-grid"
             ></div>
 
-        </article>
+        </section>
 
-    </section>
+    </main>
 
 
-
-    <!-- ==================================================
+    <!-- =====================================================
          FINAL RSVP
-         ================================================== -->
+         ===================================================== -->
 
-    <section class="bottom-rsvp">
+    <section class="final-rsvp-section">
 
         <div>
 
-            <p class="yellow-label">
+            <p class="final-label">
                 SAVE THE DATE
             </p>
 
@@ -396,7 +430,7 @@
             href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
-            class="bottom-rsvp-button"
+            class="final-rsvp-button"
         >
             🎉 RSVP NOW
         </a>
@@ -404,14 +438,13 @@
     </section>
 
 
-
-    <!-- ==================================================
+    <!-- =====================================================
          FOOTER
-         ================================================== -->
+         ===================================================== -->
 
     <footer>
 
-        <div class="footer-icons">
+        <div class="footer-emoji">
             🎈 🎂 🎉 🎁 🎈
         </div>
 
