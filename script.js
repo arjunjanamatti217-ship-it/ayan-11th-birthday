@@ -4,31 +4,45 @@
 
 
 /* ==========================================
-   GOOGLE FORM
-   ========================================== */
-
-const GOOGLE_FORM_URL =
-    "https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog";
-
-
-/* ==========================================
    FRIENDS WHO HAVE SAID YES
+   ==========================================
+
+   For now, manually add confirmed friends here.
+
+   Example:
+
+   const guests = [
+       "Aarav",
+       "Kabir",
+       "Vihaan"
+   ];
+
+   Later, we can automate this from the
+   Google Form responses.
    ========================================== */
 
 const guests = [
 
-    // Add confirmed friends here later
+    // Add confirmed friends here later.
 
     // Example:
     // "Aarav",
     // "Kabir",
-    // "Vihaan"
+    // "Vihaan",
+    // "Rohan"
 
 ];
 
 
+
 /* ==========================================
    PARTY GAMES
+   ==========================================
+
+   These are placeholders for now.
+
+   Once Ayan decides the final games,
+   replace these with the actual games.
    ========================================== */
 
 const games = [
@@ -60,6 +74,7 @@ const games = [
 ];
 
 
+
 /* ==========================================
    DISPLAY GUEST LIST
    ========================================== */
@@ -72,11 +87,34 @@ function displayGuests() {
     const guestCount =
         document.getElementById("guestCount");
 
-    guestList.innerHTML = "";
+
+    /*
+        Safety check
+
+        If the elements don't exist in
+        index.html, stop this function.
+    */
+
+    if (!guestList || !guestCount) {
+
+        console.warn(
+            "Guest list elements were not found."
+        );
+
+        return;
+    }
 
 
     /*
-        No confirmed guests yet
+        Clear existing content
+    */
+
+    guestList.innerHTML = "";
+
+
+
+    /*
+        NO CONFIRMED GUESTS YET
     */
 
     if (guests.length === 0) {
@@ -94,8 +132,9 @@ function displayGuests() {
     }
 
 
+
     /*
-        Display each confirmed guest
+        DISPLAY EACH CONFIRMED FRIEND
     */
 
     guests.forEach(function (guestName) {
@@ -108,13 +147,16 @@ function displayGuests() {
         guestElement.textContent =
             "🎉 " + guestName;
 
-        guestList.appendChild(guestElement);
+        guestList.appendChild(
+            guestElement
+        );
 
     });
 
 
+
     /*
-        Display guest count
+        DISPLAY NUMBER OF FRIENDS
     */
 
     if (guests.length === 1) {
@@ -134,6 +176,7 @@ function displayGuests() {
 }
 
 
+
 /* ==========================================
    DISPLAY PARTY GAMES
    ========================================== */
@@ -143,15 +186,41 @@ function displayGames() {
     const gamesList =
         document.getElementById("gamesList");
 
+
+    /*
+        Safety check
+    */
+
+    if (!gamesList) {
+
+        console.warn(
+            "Games list element was not found."
+        );
+
+        return;
+    }
+
+
+    /*
+        Clear existing games
+    */
+
     gamesList.innerHTML = "";
 
+
+
+    /*
+        CREATE EACH GAME CARD
+    */
 
     games.forEach(function (game) {
 
         const gameElement =
             document.createElement("div");
 
-        gameElement.className = "game-card";
+        gameElement.className =
+            "game-card";
+
 
         gameElement.innerHTML = `
             <div class="game-icon">
@@ -167,88 +236,15 @@ function displayGames() {
             </p>
         `;
 
-        gamesList.appendChild(gameElement);
+
+        gamesList.appendChild(
+            gameElement
+        );
 
     });
 
 }
 
-
-/* ==========================================
-   RSVP BUTTON
-   ========================================== */
-
-function setupRSVPButton() {
-
-    const rsvpButton =
-        document.getElementById("rsvpButton");
-
-    const rsvpMessage =
-        document.getElementById("rsvpMessage");
-
-
-    /*
-        Check previous RSVP status
-    */
-
-    const rsvpStatus =
-        localStorage.getItem(
-            "ayanBirthdayRSVP"
-        );
-
-
-    if (rsvpStatus === "started") {
-
-        rsvpButton.textContent =
-            "✅ RSVP Form";
-
-        rsvpMessage.textContent =
-            "Already responded? Great! See who's joining below 🎉";
-
-    }
-
-
-    /*
-        RSVP button click
-    */
-
-    rsvpButton.addEventListener(
-        "click",
-        function () {
-
-            if (GOOGLE_FORM_URL === "") {
-
-                alert(
-                    "The RSVP form will be available soon! 🎉"
-                );
-
-                return;
-            }
-
-
-            /*
-                Remember this browser
-            */
-
-            localStorage.setItem(
-                "ayanBirthdayRSVP",
-                "started"
-            );
-
-
-            /*
-                Open Google Form
-            */
-
-            window.open(
-                GOOGLE_FORM_URL,
-                "_blank"
-            );
-
-        }
-    );
-
-}
 
 
 /* ==========================================
@@ -259,11 +255,27 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
 
+        /*
+            Load confirmed guests
+        */
+
         displayGuests();
+
+
+        /*
+            Load party games
+        */
 
         displayGames();
 
-        setupRSVPButton();
+
+        /*
+            Helpful message for testing
+        */
+
+        console.log(
+            "🎂 Ayan's Birthday Website Loaded Successfully!"
+        );
 
     }
 );
