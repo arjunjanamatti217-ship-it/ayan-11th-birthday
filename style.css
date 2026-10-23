@@ -15,9 +15,9 @@ html {
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    color: #29263a;
-    background: #f7f4ff;
+    color: #282638;
     line-height: 1.5;
+    background: #f7f4ff;
     overflow-x: hidden;
 }
 
@@ -36,135 +36,132 @@ a {
     padding: 18px;
 
     background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(255, 255, 255, 0.15),
-            transparent 22%
-        ),
         linear-gradient(
             135deg,
-            #5047d7 0%,
-            #7449d5 48%,
-            #d6388d 100%
+            #5448da 0%,
+            #784edc 48%,
+            #d63c8c 100%
         );
 
     overflow: hidden;
 }
 
-.page-container {
+.hero-container {
     position: relative;
     z-index: 2;
+
     width: 100%;
-    max-width: 1380px;
+    max-width: 1400px;
+
     margin: 0 auto;
 }
 
 
 /* =====================================================
-   TOP BAR
+   TOP NAVIGATION
    ===================================================== */
 
-.top-bar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 18px;
-
+.top-navigation {
     min-height: 58px;
+
     margin-bottom: 16px;
     padding: 8px 10px 8px 20px;
 
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    background: rgba(31, 23, 91, 0.28);
+    gap: 16px;
+
+    color: #ffffff;
+
+    background: rgba(31, 24, 91, 0.28);
 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 18px;
 
     backdrop-filter: blur(12px);
 
-    box-shadow: 0 12px 30px rgba(27, 18, 82, 0.18);
+    box-shadow: 0 12px 30px rgba(30, 21, 86, 0.18);
 }
 
-.level {
-    justify-self: start;
+.level-heading {
     font-size: 0.9rem;
     font-weight: 900;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.5px;
 }
 
-.top-date {
-    justify-self: center;
+.navigation-date {
     font-size: 0.92rem;
     font-weight: 800;
 }
 
-.top-rsvp {
-    justify-self: end;
+.navigation-rsvp {
+    min-width: 130px;
 
-    padding: 11px 20px;
+    padding: 11px 18px;
 
-    color: #57317c;
-    background: #ffdb4d;
+    color: #56317d;
+    background: #ffd84b;
 
     border-radius: 12px;
 
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
 
     font-size: 0.88rem;
     font-weight: 900;
 
-    box-shadow: 0 7px 18px rgba(30, 20, 80, 0.22);
+    box-shadow: 0 7px 16px rgba(24, 16, 63, 0.2);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.top-rsvp:hover {
+.navigation-rsvp:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(30, 20, 80, 0.32);
+
+    box-shadow: 0 10px 20px rgba(24, 16, 63, 0.28);
 }
 
 
 /* =====================================================
-   MAIN INVITATION
+   MAIN HERO GRID
    ===================================================== */
 
-.invitation-card {
+.hero-grid {
+    min-height: calc(100vh - 110px);
+
     display: grid;
 
     grid-template-columns:
-        minmax(330px, 0.82fr)
-        minmax(570px, 1.35fr);
+        minmax(360px, 0.88fr)
+        minmax(600px, 1.35fr);
 
-    gap: 17px;
-
-    min-height: calc(100vh - 110px);
+    gap: 18px;
 }
 
 
 /* =====================================================
-   LEFT PHOTO SECTION
+   LEFT PHOTO CARD
    ===================================================== */
 
-.photo-section {
+.birthday-card {
+    min-width: 0;
+
+    padding: 22px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    min-width: 0;
-
-    padding: 22px;
-
     color: white;
-    text-align: center;
 
     background:
         linear-gradient(
-            150deg,
+            155deg,
             rgba(255, 255, 255, 0.18),
             rgba(255, 255, 255, 0.07)
         );
@@ -172,33 +169,43 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 28px;
 
+    text-align: center;
+
     backdrop-filter: blur(10px);
 
-    box-shadow: 0 20px 45px rgba(29, 19, 79, 0.22);
+    box-shadow: 0 20px 48px rgba(30, 21, 86, 0.22);
 }
 
-.photo-wrapper {
+
+/* =====================================================
+   PHOTO
+   ===================================================== */
+
+.birthday-photo-wrapper {
     position: relative;
 
     width: min(100%, 390px);
 
-    margin-bottom: 18px;
+    margin: 0 auto 20px;
 }
 
 .ayan-photo {
     display: block;
 
     width: 100%;
+    height: auto;
+
     max-height: 58vh;
 
     object-fit: contain;
+    object-position: center;
 
-    background: rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.1);
 
     border: 6px solid white;
-    border-radius: 23px;
+    border-radius: 24px;
 
-    box-shadow: 0 16px 36px rgba(24, 15, 67, 0.32);
+    box-shadow: 0 15px 35px rgba(24, 16, 63, 0.32);
 }
 
 .age-badge {
@@ -214,109 +221,118 @@ a {
     align-items: center;
     justify-content: center;
 
-    color: #57317c;
-    background: #ffda4b;
+    color: #57317d;
+    background: #ffd84b;
 
     border: 5px solid white;
     border-radius: 50%;
 
     font-size: 2.4rem;
     font-weight: 900;
+    line-height: 1;
 
-    box-shadow: 0 10px 22px rgba(25, 16, 69, 0.28);
+    box-shadow: 0 10px 22px rgba(24, 16, 63, 0.24);
 }
 
-.small-heading {
-    margin-bottom: 5px;
 
-    font-size: 0.72rem;
+/* =====================================================
+   PHOTO TEXT
+   ===================================================== */
+
+.eyebrow {
+    margin-bottom: 4px;
+
+    font-size: 0.74rem;
     font-weight: 900;
     letter-spacing: 2px;
 }
 
-.photo-text h1 {
-    font-size: clamp(2.2rem, 4vw, 3.8rem);
+.birthday-introduction h1 {
+    font-size: clamp(2.3rem, 4vw, 4rem);
     line-height: 0.95;
+    letter-spacing: 1px;
 }
 
-.photo-text h1 span {
+.birthday-introduction h1 span {
     display: block;
-    color: #ffda4b;
+    color: #ffd84b;
 }
 
-.intro-text {
-    max-width: 390px;
+.hero-message {
+    max-width: 420px;
 
     margin: 12px auto 0;
 
     font-size: 0.94rem;
+    line-height: 1.5;
+
     opacity: 0.95;
 }
 
 
 /* =====================================================
-   RIGHT SIDE
+   RIGHT INFORMATION PANEL
    ===================================================== */
 
-.details-section {
+.information-panel {
+    min-width: 0;
+
     display: grid;
-    grid-template-rows: auto 1fr auto;
+
+    grid-template-rows:
+        auto
+        1fr
+        auto;
 
     gap: 14px;
-    min-width: 0;
 }
 
 
 /* =====================================================
-   NAME BANNER
+   NAME CARD
    ===================================================== */
 
-.name-banner {
+.name-card {
+    min-height: 108px;
+
+    padding: 18px 22px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     gap: 20px;
 
-    min-height: 108px;
-
-    padding: 18px 22px;
-
-    background: white;
+    background: #ffffff;
 
     border-radius: 24px;
 
-    box-shadow: 0 16px 38px rgba(29, 20, 84, 0.18);
+    box-shadow: 0 16px 38px rgba(30, 21, 86, 0.18);
 }
 
-.pink-label {
-    color: #d7388b;
-
-    font-size: 0.69rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
+.dark-eyebrow {
+    color: #d83c8c;
 }
 
-.name-banner h2 {
+.name-card h2 {
     color: #584bd0;
 
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-size: clamp(1.7rem, 2.7vw, 2.7rem);
+
     line-height: 1.05;
 }
 
-.turning {
-    margin-top: 3px;
-
-    color: #716b7c;
+.turning-text {
+    color: #706a7b;
     font-size: 1rem;
 }
 
-.turning strong {
-    color: #dc3b8d;
-    font-size: 1.4rem;
+.turning-text strong {
+    color: #dc3d8d;
+    font-size: 1.35rem;
 }
 
-.controller {
+.controller-icon {
     flex-shrink: 0;
 
     width: 72px;
@@ -326,49 +342,69 @@ a {
     align-items: center;
     justify-content: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #eeeaff,
-            #ffeaf4
-        );
+    background: #f0edff;
 
-    border-radius: 20px;
+    border-radius: 21px;
 
-    font-size: 39px;
+    font-size: 40px;
 }
 
 
 /* =====================================================
-   PARTY DETAILS + RSVP
+   IMPORTANT:
+   PARTY DETAILS + RSVP SIDE BY SIDE
    ===================================================== */
 
-.details-grid {
+.action-grid {
+    min-height: 0;
+
     display: grid;
 
     grid-template-columns:
         minmax(0, 1fr)
-        minmax(0, 0.92fr);
+        minmax(0, 1fr);
 
     gap: 14px;
+
+    align-items: stretch;
 }
 
-.party-card,
-.rsvp-card {
+
+/* =====================================================
+   SHARED WHITE CARD STYLE
+   ===================================================== */
+
+.info-card {
     min-width: 0;
 
-    padding: 20px;
+    padding: 22px;
+
+    background: #ffffff;
 
     border-radius: 24px;
 
-    box-shadow: 0 16px 38px rgba(29, 20, 84, 0.16);
+    box-shadow: 0 16px 38px rgba(30, 21, 86, 0.16);
 }
 
-.party-card {
-    background: white;
+
+/* Explicitly make BOTH cards white */
+
+.details-card,
+.rsvp-card {
+    background: #ffffff !important;
 }
 
-.card-heading {
+
+/* =====================================================
+   PARTY DETAILS
+   ===================================================== */
+
+.details-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-heading {
     display: flex;
     align-items: center;
 
@@ -377,7 +413,8 @@ a {
     margin-bottom: 14px;
 }
 
-.heading-icon {
+.section-icon,
+.content-icon {
     flex-shrink: 0;
 
     width: 50px;
@@ -391,29 +428,42 @@ a {
         linear-gradient(
             135deg,
             #eeeaff,
-            #ffeef6
+            #fff0f6
         );
 
-    border-radius: 15px;
+    border-radius: 16px;
 
-    font-size: 27px;
+    font-size: 28px;
 }
 
-.card-heading h2,
+.mini-label {
+    color: #d83c8c;
+
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2,
 .rsvp-card h2 {
     color: #584bd0;
 
-    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+
+    line-height: 1.15;
 }
 
 
-/* PARTY DETAIL ROW */
+/* =====================================================
+   PARTY DETAIL ITEMS
+   ===================================================== */
 
-.detail-row {
+.party-detail {
     display: grid;
 
     grid-template-columns:
-        45px 1fr;
+        46px
+        1fr;
 
     align-items: center;
 
@@ -428,7 +478,7 @@ a {
     border-radius: 14px;
 }
 
-.detail-icon {
+.detail-emoji {
     width: 42px;
     height: 42px;
 
@@ -436,24 +486,25 @@ a {
     align-items: center;
     justify-content: center;
 
-    background: white;
+    background: #ffffff;
 
-    border-radius: 11px;
+    border-radius: 12px;
 
-    font-size: 22px;
+    font-size: 23px;
 }
 
-.detail-row strong {
+.party-detail strong {
     display: block;
 
     color: #594dca;
 
-    font-size: 0.86rem;
+    font-size: 0.85rem;
 }
 
-.detail-row p {
-    color: #56505f;
-    font-size: 0.9rem;
+.party-detail p {
+    color: #555060;
+
+    font-size: 0.88rem;
 }
 
 
@@ -470,48 +521,64 @@ a {
 
     text-align: center;
 
-    background: white;
-
-    border-radius: 24px;
-
-    box-shadow: 0 16px 38px rgba(29, 20, 84, 0.16);
+    background: #ffffff !important;
 }
 
 .rsvp-emoji {
-    margin-bottom: 5px;
+    width: 58px;
+    height: 58px;
 
-    font-size: 42px;
-    line-height: 1;
-}
+    margin-bottom: 10px;
 
-.rsvp-card h2 {
-    margin: 5px 0 8px;
-}
-
-.rsvp-card > p:not(.pink-label) {
-    max-width: 270px;
-
-    margin-bottom: 14px;
-
-    color: #625c6b;
-
-    font-size: 0.9rem;
-}
-
-.main-rsvp-button {
-    display: block;
-
-    width: 100%;
-
-    padding: 14px 18px;
-
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background:
         linear-gradient(
             135deg,
-            #ff675d,
-            #e53591
+            #f0edff,
+            #fff0f6
+        );
+
+    border-radius: 18px;
+
+    font-size: 32px;
+}
+
+.rsvp-card h2 {
+    margin: 5px 0 10px;
+}
+
+.rsvp-description {
+    max-width: 290px;
+
+    margin-bottom: 17px;
+
+    color: #625c6a;
+
+    font-size: 0.9rem;
+}
+
+
+/* =====================================================
+   MAIN RSVP BUTTON
+   ===================================================== */
+
+.primary-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff655d,
+            #e53691
         );
 
     border-radius: 50px;
@@ -521,44 +588,47 @@ a {
     font-size: 0.96rem;
     font-weight: 900;
 
-    box-shadow: 0 10px 24px rgba(229, 53, 145, 0.32);
+    box-shadow: 0 10px 22px rgba(229, 54, 145, 0.3);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-.main-rsvp-button:hover {
+.primary-button:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 14px 28px rgba(229, 53, 145, 0.42);
+    box-shadow: 0 14px 28px rgba(229, 54, 145, 0.4);
 }
 
-.rsvp-card small {
-    margin-top: 9px;
+.rsvp-help {
+    margin-top: 10px;
 
-    color: #817986;
+    color: #817985;
 
-    font-size: 0.72rem;
+    font-size: 0.74rem;
 }
 
 
 /* =====================================================
-   FUN ROW
+   PARTY HIGHLIGHTS
    ===================================================== */
 
-.fun-row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+.party-highlights {
     min-height: 76px;
 
-    padding: 9px 13px;
+    padding: 9px 14px;
 
-    color: white;
+    display: grid;
 
-    background: rgba(31, 23, 91, 0.38);
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    background: rgba(31, 24, 91, 0.38);
 
     border: 1px solid rgba(255, 255, 255, 0.17);
     border-radius: 22px;
@@ -566,29 +636,29 @@ a {
     backdrop-filter: blur(10px);
 }
 
-.fun-row > div {
+.highlight-item {
     display: flex;
     align-items: center;
     justify-content: center;
 
     gap: 7px;
 
+    font-size: 0.84rem;
+
     border-right: 1px solid rgba(255, 255, 255, 0.22);
-
-    font-size: 0.86rem;
 }
 
-.fun-row > div:last-child {
-    border-right: none;
+.highlight-item:last-child {
+    border-right: 0;
 }
 
-.fun-row span {
+.highlight-item span {
     font-size: 25px;
 }
 
 
 /* =====================================================
-   FLOATING DECORATION
+   FLOATING ICONS
    ===================================================== */
 
 .floating-icon {
@@ -596,122 +666,107 @@ a {
 
     z-index: 1;
 
-    font-size: 43px;
+    font-size: 44px;
 
-    opacity: 0.17;
+    opacity: 0.18;
 
     pointer-events: none;
 
-    animation: float 5s ease-in-out infinite;
+    animation: floating 5s ease-in-out infinite;
 }
 
-.balloon {
-    top: 110px;
-    left: 7px;
+.icon-one {
+    top: 95px;
+    left: 10px;
 }
 
-.star {
-    top: 220px;
-    right: 10px;
+.icon-two {
+    top: 210px;
+    right: 12px;
 
     animation-delay: 1s;
 }
 
-.game {
+.icon-three {
     bottom: 80px;
-    left: 7px;
+    left: 12px;
 
     animation-delay: 1.5s;
 }
 
-.party {
-    right: 10px;
+.icon-four {
     bottom: 30px;
+    right: 12px;
 
     animation-delay: 0.5s;
 }
 
-@keyframes float {
+@keyframes floating {
 
     0%,
     100% {
-        transform: translateY(0) rotate(0);
+        transform: translateY(0) rotate(0deg);
     }
 
     50% {
         transform: translateY(-15px) rotate(5deg);
     }
+
 }
 
 
 /* =====================================================
-   LOWER SECTION
+   LOWER CONTENT
    ===================================================== */
 
-.lower-section {
+.main-content {
     width: 100%;
-    max-width: 1380px;
+    max-width: 1400px;
 
-    margin: 24px auto;
+    margin: 26px auto;
 
-    padding: 0 18px;
+    padding: 0 20px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 18px;
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 20px;
 }
 
-.lower-card {
+.content-card {
     min-width: 0;
 
-    padding: 24px;
+    padding: 26px;
 
-    background: white;
+    background: #ffffff;
 
-    border-radius: 23px;
+    border-radius: 24px;
 
-    box-shadow: 0 13px 32px rgba(65, 47, 132, 0.10);
+    box-shadow: 0 13px 34px rgba(64, 47, 132, 0.1);
 }
 
-.lower-heading {
+.content-heading {
     display: flex;
     align-items: center;
 
-    gap: 12px;
+    gap: 13px;
 
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
-.lower-heading > span {
-    width: 50px;
-    height: 50px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #eeeaff,
-            #ffeef6
-        );
-
-    border-radius: 15px;
-
-    font-size: 27px;
-}
-
-.lower-heading h2 {
+.content-heading h2 {
     color: #584bd0;
+
     font-size: 1.55rem;
+
+    line-height: 1.1;
 }
 
-.description {
-    margin-bottom: 17px;
+.section-description {
+    margin-bottom: 18px;
 
     color: #746e7d;
 
@@ -720,22 +775,22 @@ a {
 
 
 /* =====================================================
-   GUESTS
+   GUEST LIST
    ===================================================== */
 
 .guest-list {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 9px;
 
-    margin-bottom: 13px;
+    margin-bottom: 14px;
 }
 
 .guest {
     padding: 8px 14px;
 
-    color: #5547b7;
+    color: #5546b7;
     background: #eeeaff;
 
     border-radius: 30px;
@@ -753,23 +808,27 @@ a {
 
 
 /* =====================================================
-   GAMES
+   GAME GRID
    ===================================================== */
 
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 10px;
 }
 
 .game-card {
+    min-width: 0;
+
     padding: 14px;
 
     background:
         linear-gradient(
             135deg,
-            #f3f0ff,
+            #f4f1ff,
             #fff0f6
         );
 
@@ -780,31 +839,34 @@ a {
 
 .game-icon {
     margin-bottom: 4px;
+
     font-size: 29px;
 }
 
 .game-card h3 {
     color: #594dca;
+
     font-size: 0.92rem;
 }
 
 .game-card p {
     color: #77717e;
+
     font-size: 0.8rem;
 }
 
 
 /* =====================================================
-   BOTTOM RSVP
+   FINAL RSVP
    ===================================================== */
 
-.bottom-rsvp {
-    width: calc(100% - 36px);
-    max-width: 1344px;
+.final-rsvp-section {
+    width: calc(100% - 40px);
+    max-width: 1360px;
 
-    margin: 0 auto 24px;
+    margin: 0 auto 26px;
 
-    padding: 22px 27px;
+    padding: 23px 28px;
 
     display: flex;
     align-items: center;
@@ -812,14 +874,14 @@ a {
 
     gap: 20px;
 
-    color: white;
+    color: #ffffff;
 
     background:
         linear-gradient(
             135deg,
-            #574ada,
+            #584bdb,
             #754bd8,
-            #d6388c
+            #d6398c
         );
 
     border-radius: 24px;
@@ -827,27 +889,35 @@ a {
     box-shadow: 0 14px 35px rgba(64, 47, 132, 0.18);
 }
 
-.yellow-label {
-    color: #ffda4b;
+.final-label {
+    color: #ffd84b;
 
     font-size: 0.7rem;
     font-weight: 900;
-    letter-spacing: 1.6px;
+    letter-spacing: 1.7px;
 }
 
-.bottom-rsvp h2 {
-    font-size: clamp(1.3rem, 2.3vw, 2rem);
+.final-rsvp-section h2 {
+    font-size: clamp(1.3rem, 2.2vw, 2rem);
+
+    line-height: 1.2;
 }
 
-.bottom-rsvp-button {
+.final-rsvp-section p:last-child {
+    font-size: 0.9rem;
+
+    opacity: 0.9;
+}
+
+.final-rsvp-button {
     flex-shrink: 0;
 
     min-width: 180px;
 
-    padding: 14px 23px;
+    padding: 14px 22px;
 
-    color: #57317c;
-    background: #ffda4b;
+    color: #56317d;
+    background: #ffd84b;
 
     border-radius: 50px;
 
@@ -856,12 +926,12 @@ a {
 
     font-weight: 900;
 
-    box-shadow: 0 8px 19px rgba(26, 17, 69, 0.22);
+    box-shadow: 0 8px 18px rgba(24, 16, 63, 0.2);
 
     transition: transform 0.2s ease;
 }
 
-.bottom-rsvp-button:hover {
+.final-rsvp-button:hover {
     transform: translateY(-3px);
 }
 
@@ -871,27 +941,57 @@ a {
    ===================================================== */
 
 footer {
-    padding: 35px 20px;
+    padding: 38px 20px;
 
-    color: white;
+    color: #ffffff;
     background: #29254d;
 
     text-align: center;
 }
 
-.footer-icons {
-    margin-bottom: 7px;
-    font-size: 29px;
+.footer-emoji {
+    margin-bottom: 8px;
+
+    font-size: 30px;
 }
 
 footer h2 {
     margin-bottom: 4px;
-    font-size: 1.35rem;
+
+    font-size: 1.4rem;
 }
 
 footer p {
     font-size: 0.88rem;
+
     opacity: 0.8;
+}
+
+
+/* =====================================================
+   LAPTOP / TABLET
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero-grid {
+        grid-template-columns:
+            minmax(310px, 0.8fr)
+            minmax(500px, 1.2fr);
+    }
+
+    .birthday-card {
+        padding: 18px;
+    }
+
+    .birthday-photo-wrapper {
+        width: min(100%, 340px);
+    }
+
+    .info-card {
+        padding: 18px;
+    }
+
 }
 
 
@@ -899,45 +999,45 @@ footer p {
    TABLET
    ===================================================== */
 
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
     .hero {
         min-height: auto;
     }
 
-    .invitation-card {
+    .hero-grid {
         min-height: auto;
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            1fr;
     }
 
-    .photo-section {
+    .birthday-card {
         display: grid;
 
         grid-template-columns:
-            minmax(240px, 0.8fr)
-            minmax(300px, 1.2fr);
+            minmax(250px, 0.85fr)
+            minmax(300px, 1.15fr);
+
+        align-items: center;
 
         gap: 28px;
-
-        text-align: left;
     }
 
-    .photo-wrapper {
-        margin: 0;
+    .birthday-photo-wrapper {
         width: 100%;
+        margin: 0;
     }
 
     .ayan-photo {
-        max-height: 430px;
+        max-height: 450px;
     }
 
-    .photo-text .intro-text {
-        margin-left: 0;
+    .main-content {
+        grid-template-columns:
+            1fr;
     }
 
-    .lower-section {
-        grid-template-columns: 1fr;
-    }
 }
 
 
@@ -951,49 +1051,43 @@ footer p {
         padding: 10px;
     }
 
-    .top-bar {
-        grid-template-columns: 1fr 1fr;
 
+    /* TOP NAV */
+
+    .top-navigation {
         padding: 10px;
 
-        gap: 8px;
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
-    .level {
-        grid-column: 1 / -1;
-
-        justify-self: center;
+    .level-heading {
+        width: 100%;
 
         text-align: center;
     }
 
-    .top-date {
-        justify-self: stretch;
+    .navigation-date,
+    .navigation-rsvp {
+        flex: 1;
 
         text-align: center;
-
-        font-size: 0.79rem;
     }
 
-    .top-rsvp {
-        justify-self: stretch;
 
-        padding: 10px;
+    /* PHOTO */
 
-        font-size: 0.82rem;
-    }
-
-    .photo-section {
+    .birthday-card {
         display: flex;
+
         flex-direction: column;
 
         padding: 18px 15px;
-
-        text-align: center;
     }
 
-    .photo-wrapper {
-        width: min(100%, 330px);
+    .birthday-photo-wrapper {
+        width: min(100%, 320px);
 
         margin: 0 auto 18px;
     }
@@ -1002,69 +1096,80 @@ footer p {
         max-height: none;
     }
 
-    .photo-text h1 {
+    .birthday-introduction h1 {
         font-size: 2.5rem;
     }
 
-    .photo-text .intro-text {
-        margin-left: auto;
-        margin-right: auto;
+
+    /* NAME */
+
+    .name-card {
+        min-height: 95px;
+
+        padding: 16px;
     }
 
-    .name-banner {
-        min-height: 92px;
-
-        padding: 15px;
+    .name-card h2 {
+        font-size: 1.45rem;
     }
 
-    .name-banner h2 {
-        font-size: 1.4rem;
-    }
-
-    .controller {
+    .controller-icon {
         width: 58px;
         height: 58px;
 
-        font-size: 31px;
+        font-size: 32px;
     }
 
-    .details-grid {
-        grid-template-columns: 1fr;
+
+    /* DETAILS + RSVP STACK ON MOBILE */
+
+    .action-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
     }
 
-    .party-card,
+    .details-card,
     .rsvp-card {
-        padding: 18px;
+        background: #ffffff !important;
     }
 
-    .fun-row {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* HIGHLIGHTS */
+
+    .party-highlights {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    .fun-row > div {
-        min-height: 47px;
+    .highlight-item:nth-child(2) {
+        border-right: 0;
     }
 
-    .fun-row > div:nth-child(2) {
-        border-right: none;
+
+    /* LOWER CONTENT */
+
+    .main-content {
+        margin: 18px auto;
+
+        padding: 0 12px;
     }
 
-    .lower-section {
-        margin: 17px auto;
-
-        padding: 0 10px;
-    }
-
-    .lower-card {
-        padding: 19px;
+    .content-card {
+        padding: 20px;
     }
 
     .games-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
-    .bottom-rsvp {
-        width: calc(100% - 20px);
+
+    /* FINAL RSVP */
+
+    .final-rsvp-section {
+        width: calc(100% - 24px);
 
         padding: 20px;
 
@@ -1073,13 +1178,17 @@ footer p {
         text-align: center;
     }
 
-    .bottom-rsvp-button {
+    .final-rsvp-button {
         width: 100%;
     }
+
+
+    /* REMOVE DECORATIVE ICONS ON PHONE */
 
     .floating-icon {
         display: none;
     }
+
 }
 
 
@@ -1089,39 +1198,33 @@ footer p {
 
 @media (max-width: 400px) {
 
-    .top-bar {
-        grid-template-columns: 1fr;
-    }
-
-    .level {
-        grid-column: auto;
-    }
-
-    .top-date,
-    .top-rsvp {
+    .navigation-date,
+    .navigation-rsvp {
         width: 100%;
+        flex: auto;
     }
 
-    .photo-text h1 {
-        font-size: 2.15rem;
+    .birthday-introduction h1 {
+        font-size: 2.1rem;
     }
 
     .age-badge {
-        width: 65px;
-        height: 65px;
+        width: 66px;
+        height: 66px;
 
         font-size: 2rem;
     }
 
-    .controller {
+    .controller-icon {
         display: none;
     }
 
-    .fun-row span {
-        font-size: 22px;
+    .party-highlights {
+        gap: 4px;
     }
 
-    .fun-row > div {
-        font-size: 0.77rem;
+    .highlight-item {
+        font-size: 0.76rem;
     }
+
 }
