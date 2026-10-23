@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -15,201 +14,44 @@
         content="Ayan Janamatti's 11th Birthday Party Invitation"
     >
 
-    <title>Ayan's 11th Birthday 🎂</title>
+    <title>Ayan's 11th Birthday</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 
 <body>
 
-
     <!-- ==========================================
-         FLOATING DECORATIONS
-         ========================================== -->
-
-    <div class="floating-decoration balloon-1">
-        🎈
-    </div>
-
-    <div class="floating-decoration balloon-2">
-        🎈
-    </div>
-
-    <div class="floating-decoration star-1">
-        ⭐
-    </div>
-
-    <div class="floating-decoration star-2">
-        ✨
-    </div>
-
-
-
-    <!-- ==========================================
-         HERO SECTION
-         Party Details | Ayan | RSVP
+         HERO / FIRST SCREEN
          ========================================== -->
 
     <header class="hero">
 
-        <div class="hero-layout">
+        <!-- Background decorations -->
+
+        <span class="floating-icon icon-one">🎈</span>
+        <span class="floating-icon icon-two">⭐</span>
+        <span class="floating-icon icon-three">🎮</span>
+        <span class="floating-icon icon-four">🎉</span>
+
+
+        <div class="hero-container">
 
 
             <!-- ==================================
-                 LEFT SIDE - PARTY DETAILS
+                 TOP NAVIGATION
                  ================================== -->
 
-            <section class="hero-side-card hero-details">
+            <nav class="top-navigation">
 
-                <div class="hero-card-icon">
-                    🎉
-                </div>
-
-                <h2>
-                    Party Details
-                </h2>
-
-
-                <!-- DATE -->
-
-                <div class="hero-detail-item">
-
-                    <span class="hero-detail-icon">
-                        📅
-                    </span>
-
-                    <div>
-                        <strong>
-                            Date
-                        </strong>
-
-                        <p>
-                            28 October 2026
-                        </p>
-                    </div>
-
+                <div class="level-heading">
+                    🎮 LEVEL 11 UNLOCKED
                 </div>
 
 
-                <!-- TIME -->
-
-                <div class="hero-detail-item">
-
-                    <span class="hero-detail-icon">
-                        ⏰
-                    </span>
-
-                    <div>
-                        <strong>
-                            Time
-                        </strong>
-
-                        <p>
-                            Coming soon!
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <!-- VENUE -->
-
-                <div class="hero-detail-item">
-
-                    <span class="hero-detail-icon">
-                        📍
-                    </span>
-
-                    <div>
-                        <strong>
-                            Venue
-                        </strong>
-
-                        <p>
-                            Coming soon!
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="mini-message">
-                    🎈 Save the date!
-                </div>
-
-            </section>
-
-
-
-            <!-- ==================================
-                 CENTER - AYAN
-                 ================================== -->
-
-            <div class="hero-content">
-
-                <p class="small-heading">
-                    🎮 LEVEL 11 UNLOCKED 🎮
-                </p>
-
-
-                images/IMG_2448.jpeg
-
-
-                <h1>
-                    AYAN JANAMATTI
-                </h1>
-
-
-                <h2 class="turning-text">
-                    IS TURNING
-                </h2>
-
-
-                <div class="age">
-                    11
-                </div>
-
-
-                <p class="birthday-date">
-                    🎂 28 OCTOBER 2026 🎂
-                </p>
-
-
-                <p class="hero-message">
-                    You're invited to an epic birthday celebration
-                    filled with games, food, fun and surprises!
-                </p>
-
-            </div>
-
-
-
-            <!-- ==================================
-                 RIGHT SIDE - RSVP
-                 ================================== -->
-
-            <section class="hero-side-card hero-rsvp">
-
-                <div class="hero-card-icon">
-                    🎉
-                </div>
-
-
-                <h2>
-                    Are You Coming?
-                </h2>
-
-
-                <p class="hero-rsvp-main-text">
-                    We'd love to celebrate Ayan's
-                    special day with you!
-                </p>
-
-
-                <div class="rsvp-decoration">
-                    🎈 🎂 🎈
+                <div class="navigation-date">
+                    🎂 28 OCTOBER 2026
                 </div>
 
 
@@ -217,24 +59,272 @@
                     href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="primary-button"
+                    class="navigation-rsvp"
                 >
-                    🎉 RSVP NOW
+                    RSVP NOW
                 </a>
 
-
-                <p class="rsvp-help">
-                    Click above to let us know
-                    if you can join us.
-                </p>
+            </nav>
 
 
-                <div class="rsvp-bottom-message">
-                    ⭐ Don't miss the fun! ⭐
-                </div>
 
-            </section>
+            <!-- ==================================
+                 MAIN HERO GRID
+                 ================================== -->
 
+            <div class="hero-grid">
+
+
+                <!-- ==============================
+                     LEFT: PHOTO AND TITLE
+                     ============================== -->
+
+                <section class="birthday-card">
+
+                    <div class="birthday-photo-wrapper">
+
+                        images/IMG_2448.jpeg
+
+                        <div class="age-badge">
+                            11
+                        </div>
+
+                    </div>
+
+
+                    <div class="birthday-introduction">
+
+                        <p class="eyebrow">
+                            YOU ARE INVITED TO
+                        </p>
+
+                        <h1>
+                            AYAN'S
+                            <span>BIRTHDAY</span>
+                        </h1>
+
+                        <p class="hero-message">
+                            Join us for an epic birthday celebration
+                            filled with games, food, cake and fun!
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ==============================
+                     RIGHT: DETAILS AND RSVP
+                     ============================== -->
+
+                <section class="information-panel">
+
+
+                    <!-- Name header -->
+
+                    <div class="name-card">
+
+                        <div>
+
+                            <p class="eyebrow dark-eyebrow">
+                                PLAYER ONE
+                            </p>
+
+                            <h2>
+                                AYAN JANAMATTI
+                            </h2>
+
+                            <p class="turning-text">
+                                is turning
+                                <strong>11!</strong>
+                            </p>
+
+                        </div>
+
+
+                        <div class="controller-icon">
+                            🕹️
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Details and RSVP row -->
+
+                    <div class="action-grid">
+
+
+                        <!-- Party details -->
+
+                        <article class="info-card details-card">
+
+                            <div class="section-heading">
+
+                                <div class="section-icon">
+                                    🎉
+                                </div>
+
+                                <div>
+
+                                    <p class="mini-label">
+                                        SAVE THE DATE
+                                    </p>
+
+                                    <h2>
+                                        Party Details
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="party-detail">
+
+                                <div class="detail-emoji">
+                                    📅
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Date
+                                    </strong>
+
+                                    <p>
+                                        28 October 2026
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="party-detail">
+
+                                <div class="detail-emoji">
+                                    ⏰
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Time
+                                    </strong>
+
+                                    <p>
+                                        Coming soon!
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="party-detail">
+
+                                <div class="detail-emoji">
+                                    📍
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Venue
+                                    </strong>
+
+                                    <p>
+                                        Coming soon!
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- RSVP -->
+
+                        <article class="info-card rsvp-card">
+
+                            <div class="rsvp-emoji">
+                                🎈
+                            </div>
+
+
+                            <p class="mini-label">
+                                JOIN THE CELEBRATION
+                            </p>
+
+
+                            <h2>
+                                Are You Coming?
+                            </h2>
+
+
+                            <p class="rsvp-description">
+                                We'd love to celebrate Ayan's
+                                special day with you!
+                            </p>
+
+
+                            <a
+                                href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="primary-button"
+                            >
+                                🎉 YES, I'M COMING!
+                            </a>
+
+
+                            <p class="rsvp-help">
+                                Click to open the RSVP form
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- Party highlights -->
+
+                    <div class="party-highlights">
+
+                        <div class="highlight-item">
+                            <span>🎮</span>
+                            <strong>Games</strong>
+                        </div>
+
+
+                        <div class="highlight-item">
+                            <span>🍕</span>
+                            <strong>Food</strong>
+                        </div>
+
+
+                        <div class="highlight-item">
+                            <span>🎂</span>
+                            <strong>Cake</strong>
+                        </div>
+
+
+                        <div class="highlight-item">
+                            <span>🏆</span>
+                            <strong>Fun</strong>
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+            </div>
 
         </div>
 
@@ -243,33 +333,43 @@
 
 
     <!-- ==========================================
-         MAIN CONTENT
+         ADDITIONAL CONTENT
          ========================================== -->
 
-    <main>
+    <main class="main-content">
 
 
         <!-- ======================================
              PARTY SQUAD
              ====================================== -->
 
-        <section class="card">
+        <section class="content-card">
 
-            <h2>
-                👦 The Party Squad
-            </h2>
+            <div class="content-heading">
+
+                <div class="content-icon">
+                    👦
+                </div>
+
+                <div>
+
+                    <p class="mini-label">
+                        MEET THE PLAYERS
+                    </p>
+
+                    <h2>
+                        The Party Squad
+                    </h2>
+
+                </div>
+
+            </div>
 
 
             <p class="section-description">
-                Meet the friends joining
-                Ayan's birthday celebration!
+                Meet the friends joining Ayan's birthday celebration!
             </p>
 
-
-            <!--
-                JavaScript populates
-                confirmed guest names here.
-            -->
 
             <div
                 id="guestList"
@@ -277,11 +377,6 @@
             >
             </div>
 
-
-            <!--
-                JavaScript populates
-                guest count here.
-            -->
 
             <p
                 id="guestCount"
@@ -294,26 +389,36 @@
 
 
         <!-- ======================================
-             GAMES
+             GAME ZONE
              ====================================== -->
 
-        <section class="card games-section">
+        <section class="content-card">
 
+            <div class="content-heading">
 
-            <h2>
-                🎮 Game Zone
-            </h2>
+                <div class="content-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <p class="mini-label">
+                        PREPARE TO PLAY
+                    </p>
+
+                    <h2>
+                        Game Zone
+                    </h2>
+
+                </div>
+
+            </div>
 
 
             <p class="section-description">
-                Get ready for some serious
-                birthday fun!
+                Get ready for some serious birthday fun!
             </p>
 
-
-            <!--
-                JavaScript populates games here.
-            -->
 
             <div
                 id="gamesList"
@@ -321,69 +426,45 @@
             >
             </div>
 
-
         </section>
-
-
-
-        <!-- ======================================
-             PARTY FEATURES
-             ====================================== -->
-
-        <section class="card party-promise">
-
-
-            <h2>
-                🎂 Get Ready!
-            </h2>
-
-
-            <div class="promise-items">
-
-
-                <div>
-                    🎮
-
-                    <span>
-                        Games
-                    </span>
-                </div>
-
-
-                <div>
-                    🍕
-
-                    <span>
-                        Food
-                    </span>
-                </div>
-
-
-                <div>
-                    🎂
-
-                    <span>
-                        Cake
-                    </span>
-                </div>
-
-
-                <div>
-                    🏆
-
-                    <span>
-                        Fun
-                    </span>
-                </div>
-
-
-            </div>
-
-
-        </section>
-
 
     </main>
+
+
+
+    <!-- ==========================================
+         FINAL RSVP SECTION
+         ========================================== -->
+
+    <section class="final-rsvp-section">
+
+        <div>
+
+            <p class="final-label">
+                SAVE THE DATE
+            </p>
+
+            <h2>
+                Ready to Celebrate Ayan's Level 11?
+            </h2>
+
+            <p>
+                28 October 2026
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="final-rsvp-button"
+        >
+            🎉 RSVP NOW
+        </a>
+
+    </section>
 
 
 
@@ -393,21 +474,17 @@
 
     <footer>
 
-
         <div class="footer-emoji">
             🎈 🎂 🎉 🎁 🎈
         </div>
-
 
         <h2>
             Can't wait to celebrate with you!
         </h2>
 
-
         <p>
             Ayan's 11th Birthday • 28 October 2026
         </p>
-
 
     </footer>
 
@@ -418,7 +495,6 @@
          ========================================== -->
 
     <script src="script.js"></script>
-
 
 </body>
 
