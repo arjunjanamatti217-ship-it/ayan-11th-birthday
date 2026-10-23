@@ -3,53 +3,33 @@
    ========================================== */
 
 
-/*
-    GOOGLE FORM
+/* ==========================================
+   GOOGLE FORM
+   ========================================== */
 
-    TODO:
-    Replace the value below after we create
-    the final Google Form.
-*/
-
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog";
+const GOOGLE_FORM_URL =
+    "https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog";
 
 
-
-/*
-    FRIENDS WHO HAVE SAID YES
-
-    For Version 1 we will manually maintain
-    this list.
-
-    Later we can automatically load this
-    from the RSVP responses.
-
-    Example:
-
-    const guests = [
-        "Aarav",
-        "Kabir",
-        "Vihaan"
-    ];
-*/
+/* ==========================================
+   FRIENDS WHO HAVE SAID YES
+   ========================================== */
 
 const guests = [
 
     // Add confirmed friends here later
 
+    // Example:
+    // "Aarav",
+    // "Kabir",
+    // "Vihaan"
+
 ];
 
 
-
-/*
-    PARTY GAMES
-
-    TODO:
-    Replace these once Ayan chooses the
-    final games.
-
-    These are temporary suggestions only.
-*/
+/* ==========================================
+   PARTY GAMES
+   ========================================== */
 
 const games = [
 
@@ -80,7 +60,6 @@ const games = [
 ];
 
 
-
 /* ==========================================
    DISPLAY GUEST LIST
    ========================================== */
@@ -92,7 +71,6 @@ function displayGuests() {
 
     const guestCount =
         document.getElementById("guestCount");
-
 
     guestList.innerHTML = "";
 
@@ -136,7 +114,7 @@ function displayGuests() {
 
 
     /*
-        Display count
+        Display guest count
     */
 
     if (guests.length === 1) {
@@ -154,7 +132,6 @@ function displayGuests() {
     }
 
 }
-
 
 
 /* ==========================================
@@ -197,7 +174,6 @@ function displayGames() {
 }
 
 
-
 /* ==========================================
    RSVP BUTTON
    ========================================== */
@@ -212,8 +188,7 @@ function setupRSVPButton() {
 
 
     /*
-        Check if RSVP was previously started
-        from this browser.
+        Check previous RSVP status
     */
 
     const rsvpStatus =
@@ -237,70 +212,43 @@ function setupRSVPButton() {
         RSVP button click
     */
 
-//     rsvpButton.addEventListener(
-//         "click",
-//         function () {
+    rsvpButton.addEventListener(
+        "click",
+        function () {
 
-//             /*
-//                 Google Form not configured yet
-//             */
+            if (GOOGLE_FORM_URL === "") {
 
-//             if (GOOGLE_FORM_URL === "") {
+                alert(
+                    "The RSVP form will be available soon! 🎉"
+                );
 
-//                 alert(
-//                     "The RSVP form will be available soon! 🎉"
-//                 );
-
-//                 return;
-//             }
+                return;
+            }
 
 
-//             /*
-//                 Remember this browser
-//             */
+            /*
+                Remember this browser
+            */
 
-//             localStorage.setItem(
-//                 "ayanBirthdayRSVP",
-//                 "started"
-//             );
-
-
-//             /*
-//                 Open Google Form
-//             */
-
-//             window.location.href =
-//                 GOOGLE_FORM_URL;
-
-//         }
-//     );
-
-// }
-rsvpButton.addEventListener(
-    "click",
-    function () {
-
-        if (GOOGLE_FORM_URL === "") {
-
-            alert(
-                "The RSVP form will be available soon! 🎉"
+            localStorage.setItem(
+                "ayanBirthdayRSVP",
+                "started"
             );
 
-            return;
+
+            /*
+                Open Google Form
+            */
+
+            window.open(
+                GOOGLE_FORM_URL,
+                "_blank"
+            );
+
         }
+    );
 
-        localStorage.setItem(
-            "ayanBirthdayRSVP",
-            "started"
-        );
-
-        window.open(
-            GOOGLE_FORM_URL,
-            "_blank"
-        );
-
-    }
-);
+}
 
 
 /* ==========================================
