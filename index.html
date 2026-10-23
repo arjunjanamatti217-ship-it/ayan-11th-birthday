@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -16,153 +18,302 @@
     <title>Ayan's 11th Birthday 🎂</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <!-- Floating decorations -->
-    <div class="floating-decoration balloon balloon-1">🎈</div>
-    <div class="floating-decoration balloon balloon-2">🎈</div>
-    <div class="floating-decoration star star-1">⭐</div>
-    <div class="floating-decoration star star-2">✨</div>
+
+    <!-- ==========================================
+         FLOATING DECORATIONS
+         ========================================== -->
+
+    <div class="floating-decoration balloon balloon-1">
+        🎈
+    </div>
+
+    <div class="floating-decoration balloon balloon-2">
+        🎈
+    </div>
+
+    <div class="floating-decoration star star-1">
+        ⭐
+    </div>
+
+    <div class="floating-decoration star star-2">
+        ✨
+    </div>
 
 
-    <!-- HERO SECTION -->
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+
     <header class="hero">
 
         <div class="hero-content">
+
 
             <p class="small-heading">
                 🎮 LEVEL 11 UNLOCKED 🎮
             </p>
 
-            <!--
-            TODO:
-            When you have Ayan's photo, uncomment this section.
 
+            <!--
+                AYAN'S PHOTO
+
+                Once you have Ayan's photo:
+
+                1. Put the photo inside:
+
+                   images/ayan-photo.jpg
+
+                2. Delete the temporary-avatar DIV below.
+
+                3. Uncomment the IMG section.
+            -->
+
+
+            <!--
             <img
                 src="images/ayan-photo.jpg"
-                alt="Ayan"
+                alt="Ayan Janamatti"
                 class="ayan-photo"
             >
             -->
 
-            <!-- Temporary avatar until photo is added -->
+
+            <!-- Temporary avatar -->
+
             <div class="temporary-avatar">
                 🥳
             </div>
+
 
             <h1>
                 AYAN JANAMATTI
             </h1>
 
+
             <h2>
                 IS TURNING
             </h2>
+
 
             <div class="age">
                 11
             </div>
 
+
             <p class="birthday-date">
                 🎂 28 OCTOBER 2026 🎂
             </p>
 
+
             <p class="hero-message">
+
                 You're invited to an epic birthday celebration
                 filled with games, food, fun and surprises!
+
             </p>
+
 
         </div>
 
     </header>
 
 
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
     <main>
 
-        <!-- PARTY DETAILS -->
+
+
+        <!-- ======================================
+             PARTY DETAILS
+             ====================================== -->
+
         <section class="card">
 
             <h2>
                 🎉 Party Details
             </h2>
 
+
             <div class="details-grid">
 
-                <div class="detail-item">
-                    <span class="detail-icon">📅</span>
-                    <div>
-                        <strong>Date</strong>
-                        <p>28 October 2026</p>
-                    </div>
-                </div>
+
+                <!-- DATE -->
 
                 <div class="detail-item">
-                    <span class="detail-icon">⏰</span>
-                    <div>
-                        <strong>Time</strong>
 
-                        <!-- TODO: Replace once party time is finalized -->
-                        <p>Party time coming soon!</p>
+                    <span class="detail-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Date
+                        </strong>
+
+                        <p>
+                            28 October 2026
+                        </p>
+
                     </div>
+
                 </div>
+
+
+
+                <!-- TIME -->
 
                 <div class="detail-item">
-                    <span class="detail-icon">📍</span>
-                    <div>
-                        <strong>Venue</strong>
 
-                        <!-- TODO: Replace once venue is finalized -->
-                        <p>Venue details coming soon!</p>
+                    <span class="detail-icon">
+                        ⏰
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Time
+                        </strong>
+
+                        <!--
+                            TODO:
+                            Replace this once party
+                            time is finalized.
+                        -->
+
+                        <p>
+                            Party time coming soon!
+                        </p>
+
                     </div>
+
                 </div>
+
+
+
+                <!-- VENUE -->
+
+                <div class="detail-item">
+
+                    <span class="detail-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Venue
+                        </strong>
+
+                        <!--
+                            TODO:
+                            Replace this once venue
+                            is finalized.
+                        -->
+
+                        <p>
+                            Venue details coming soon!
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
+
 
         </section>
 
 
-        <!-- RSVP -->
+
+        <!-- ======================================
+             RSVP
+             ====================================== -->
+
         <section class="card rsvp-card">
+
 
             <div class="rsvp-icon">
                 🎉
             </div>
 
+
             <h2>
                 Are You Coming?
             </h2>
 
+
             <p>
-                We'd love to celebrate Ayan's special day with you!
+                We'd love to celebrate Ayan's
+                special day with you!
             </p>
 
-            <button
-                id="rsvpButton"
+
+            <!--
+                IMPORTANT:
+
+                This RSVP link goes DIRECTLY
+                to the Google Form.
+
+                JavaScript is NOT required
+                for this button to work.
+            -->
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScAfVrWEdB99ASJSckwbCfBRP4MSSABwG0yQTJ4ttUNmEk9og/viewform?usp=dialog"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="primary-button"
-                type="button"
             >
                 🎉 RSVP NOW
-            </button>
+            </a>
 
-            <p
-                id="rsvpMessage"
-                class="rsvp-message"
-            ></p>
+
+            <p class="rsvp-help">
+                Click above to let us know if you can join us.
+            </p>
+
 
         </section>
 
 
-        <!-- PARTY SQUAD -->
+
+        <!-- ======================================
+             PARTY SQUAD
+             ====================================== -->
+
         <section class="card">
+
 
             <h2>
                 👦 The Party Squad
             </h2>
 
+
             <p class="section-description">
-                Meet the friends joining Ayan's birthday celebration!
+
+                Meet the friends joining
+                Ayan's birthday celebration!
+
             </p>
+
+
+            <!--
+                JavaScript populates
+                confirmed guest names here.
+            -->
 
             <div
                 id="guestList"
@@ -170,25 +321,47 @@
             >
             </div>
 
+
+            <!--
+                JavaScript populates
+                guest count here.
+            -->
+
             <p
                 id="guestCount"
                 class="guest-count"
             >
             </p>
 
+
         </section>
 
 
-        <!-- GAMES -->
+
+        <!-- ======================================
+             GAMES
+             ====================================== -->
+
         <section class="card games-section">
+
 
             <h2>
                 🎮 Game Zone
             </h2>
 
+
             <p class="section-description">
-                Get ready for some serious birthday fun!
+
+                Get ready for some serious
+                birthday fun!
+
             </p>
+
+
+            <!--
+                JavaScript populates
+                the games here.
+            -->
 
             <div
                 id="gamesList"
@@ -196,64 +369,108 @@
             >
             </div>
 
+
         </section>
 
 
-        <!-- PARTY PROMISE -->
+
+        <!-- ======================================
+             PARTY FEATURES
+             ====================================== -->
+
         <section class="card party-promise">
+
 
             <h2>
                 🎂 Get Ready!
             </h2>
 
+
             <div class="promise-items">
+
 
                 <div>
                     🎮
-                    <span>Games</span>
+                    <span>
+                        Games
+                    </span>
                 </div>
+
 
                 <div>
                     🍕
-                    <span>Food</span>
+                    <span>
+                        Food
+                    </span>
                 </div>
+
 
                 <div>
                     🎂
-                    <span>Cake</span>
+                    <span>
+                        Cake
+                    </span>
                 </div>
+
 
                 <div>
                     🏆
-                    <span>Fun</span>
+                    <span>
+                        Fun
+                    </span>
                 </div>
+
 
             </div>
 
+
         </section>
+
+
 
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
     <footer>
 
+
         <div class="footer-emoji">
+
             🎈 🎂 🎉 🎁 🎈
+
         </div>
 
+
         <h2>
+
             Can't wait to celebrate with you!
+
         </h2>
 
+
         <p>
+
             Ayan's 11th Birthday • 28 October 2026
+
         </p>
+
 
     </footer>
 
 
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
     <script src="script.js"></script>
 
+
 </body>
+
 </html>
