@@ -50,25 +50,25 @@ const games = [
     {
         name: "Game 1",
         icon: "🎮",
-        description: "Game details coming soon!"
+        description: "Cricket + Football"
     },
 
     {
         name: "Game 2",
         icon: "🏆",
-        description: "Game details coming soon!"
+        description: "Long range shooting"
     },
 
     {
         name: "Game 3",
         icon: "🎯",
-        description: "Game details coming soon!"
+        description: "One-pitch scoring"
     },
 
     {
         name: "Game 4",
         icon: "🎉",
-        description: "Game details coming soon!"
+        description: "Penalties"
     }
 
 ];
