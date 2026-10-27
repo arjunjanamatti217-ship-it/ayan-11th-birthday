@@ -29,7 +29,8 @@ const guests = [
    "Shlok",
    "Aradhya",
    "Mayank",
-   "Chiku"
+   "Chiku",
+   "Ripu"
 ];
 
 
