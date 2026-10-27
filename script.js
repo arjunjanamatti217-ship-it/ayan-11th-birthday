@@ -23,13 +23,12 @@
 
 const guests = [
 
-    // Add confirmed friends here later.
-
-    // Example:
-    // "Aarav",
-    // "Kabir",
-    // "Vihaan",
-    // "Rohan"
+    "Vishrut",
+    "Akshar",
+    "Prithvi",
+    "Viyan",
+   "Rachit",
+   "Sharwin"
 
 ];
 
