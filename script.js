@@ -19,7 +19,16 @@ const guests = [
     "Prithvi",
     "Viyan",
     "Rachit",
-    "Sharwin"
+    "Sharwin",
+   "Siyaa",
+   "Yukhti",
+   "Yugen",
+   "Anant",
+   "Shrishti",
+   "Avyan",
+   "Shlok",
+   "Aradhya",
+   "Mayank"
 ];
 
 
