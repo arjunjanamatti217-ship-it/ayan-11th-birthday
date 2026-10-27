@@ -24,7 +24,6 @@ const guests = [
    "Yukhti",
    "Yugen",
    "Anant",
-   "Shrishti",
    "Avyan",
    "Shlok",
    "Aradhya",
