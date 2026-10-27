@@ -9,69 +9,46 @@
 
    For now, manually add confirmed friends here.
 
-   Example:
-
-   const guests = [
-       "Aarav",
-       "Kabir",
-       "Vihaan"
-   ];
-
    Later, we can automate this from the
    Google Form responses.
    ========================================== */
 
 const guests = [
-
     "Vishrut",
     "Akshar",
     "Prithvi",
     "Viyan",
-   "Rachit",
-   "Sharwin"
-
+    "Rachit",
+    "Sharwin"
 ];
-
 
 
 /* ==========================================
    PARTY GAMES
-   ==========================================
-
-   These are placeholders for now.
-
-   Once Ayan decides the final games,
-   replace these with the actual games.
    ========================================== */
 
 const games = [
-
     {
         name: "Game 1",
         icon: "🎮",
         description: "Cricket + Football"
     },
-
     {
         name: "Game 2",
         icon: "🏆",
         description: "Long range shooting"
     },
-
     {
         name: "Game 3",
         icon: "🎯",
         description: "One-pitch scoring"
     },
-
     {
         name: "Game 4",
         icon: "🎉",
         description: "Penalties"
     }
-
 ];
-
 
 
 /* ==========================================
@@ -89,17 +66,14 @@ function displayGuests() {
 
     /*
         Safety check
-
         If the elements don't exist in
         index.html, stop this function.
     */
 
     if (!guestList || !guestCount) {
-
         console.warn(
             "Guest list elements were not found."
         );
-
         return;
     }
 
@@ -109,7 +83,6 @@ function displayGuests() {
     */
 
     guestList.innerHTML = "";
-
 
 
     /*
@@ -131,7 +104,6 @@ function displayGuests() {
     }
 
 
-
     /*
         DISPLAY EACH CONFIRMED FRIEND
     */
@@ -149,9 +121,7 @@ function displayGuests() {
         guestList.appendChild(
             guestElement
         );
-
     });
-
 
 
     /*
@@ -169,9 +139,7 @@ function displayGuests() {
             "🎊 " +
             guests.length +
             " friends are joining Ayan!";
-
     }
-
 }
 
 
